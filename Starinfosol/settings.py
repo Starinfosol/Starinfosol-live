@@ -26,10 +26,7 @@ SECRET_KEY = 'django-insecure-kcm-6#mfl54fxo_rt4h#^pax6mbfhrdgi2lmz+g8csev78x)b1
 DEBUG = False
 
 # ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = [
-    '127.0.0.1'
-    'genpk.herokuapp.com'
-]
+ALLOWED_HOSTS = ["starinfosol-live.herokuapp.com"]
 
 
 # Application definition
