@@ -1,0 +1,1 @@
+web: gunicorn Starinfosol.wsgi --log-file
