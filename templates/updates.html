@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Updates{% endblock title %}
+{% block blogactive %} active {% endblock blogactive %} 
+
+{% block body %}
+
+{% load static %}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>Blogs</li>
+            <form method="get" action="/search" class="form-inline my-2 my-lg-0 mx-3">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" id="query">
+                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+            </form>
+        </ol>
+        <h2>Updates</h2>
+
+    </div>
+    
+</section><!-- End Breadcrumbs -->
+
+<div class="container my-3">
+    <h2>Articles by Starinfosol</h2>
+    {% for post in allPosts %}
+    <div
+        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Article by {{post.author}}</strong>
+            <h3 class="mb-0">{{post.title}}</h3>
+            <div class="mb-1 text-muted">{{post.datetime}}</div>
+            <p class="card-text mb-auto">{{post.content| truncatechars:500}}</p>
+            <div class="my-2">
+                <a href="/blogs/{{post.slug}}" role="button" class="btn btn-primary">Continue reading</a>
+            </div>
+
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+            </svg>
+        </div>
+    </div>
+    <img src="{{ img.image.url }}" >
+    {% endfor %}
+</div>
+
+
+{% endblock body %}

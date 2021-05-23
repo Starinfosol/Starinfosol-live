@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}Blogs{% endblock title %}
+{% block blogactive %} active {% endblock blogactive %} 
 
 {% block body %}
 
 {% load static %}
+
+
+
+
+
+
+
 
 <main id="main">
   <!-- ======= Breadcrumbs ======= -->
@@ -13,12 +21,42 @@
 
       <ol>
         <li><a href="/">Home</a></li>
-        <li>Blog</li>
+        <li>Blogs</li>
       </ol>
-      <h2>Blog</h2>
+      <h2>Updates</h2>
 
     </div>
   </section><!-- End Breadcrumbs -->
+
+<!-- 
+  <div class="container my-3">
+    <h2>Articles by Starinfosol</h2>
+    {% for post in allPosts %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">Article by {{post.author}}</strong>
+        <h3 class="mb-0">{{post.title}}</h3>
+        <div class="mb-1 text-muted">{{post.datetime}}</div>
+        <p class="card-text mb-auto">{{post.content| truncatechars:500}}</p>
+        <div class="my-2">
+          <a href="/blogs/{{post.slug}}" role="button" class="btn btn-primary">Continue reading</a>
+        </div>
+  
+      </div>
+      <div class="col-auto d-none d-lg-block">
+        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+            dy=".3em">Thumbnail</text>
+        </svg>
+      </div>
+    </div>
+  
+    {% endfor %}
+  </div> -->
+
+
 
   <!-- ======= Blog Section ======= -->
   <section id="blog" class="blog">
@@ -28,32 +66,74 @@
 
         <div class="col-lg-8 entries">
 
+
+
           <article class="entry">
 
             <div class="entry-img">
-              <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt="" class="img-fluid">
-              <!-- <img src="/My_web/Starinfosol/static/assets/img/blog/blog-1.jpg" alt="" class="img-fluid"> -->
+              <img src="{% static 'assets/img/blog/blog-002.jpg' %}" alt="" class="img-fluid">
             </div>
 
             <h2 class="entry-title">
-              <a href="/blog-single">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              <a href="/blog-single">Covid-19 Helpline Numbers :</a>
             </h2>
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12 Comments</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a>
+                </li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time
+                      datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12
+                    Comments</a></li>
               </ul>
             </div>
 
             <div class="entry-content">
               <p>
-                Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                Yes, helpline services are operating in the present situation of Coronavirus pandemic. There are many
+                dedicated helplines that exclusively deal with Covid-19 related information too. Many helplines in
+                Jabalpur are available 24-hours a day.
               </p>
               <div class="read-more">
                 <a href="/blog-single">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+
+
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="{% static 'assets/img/blog/blog-c2.jpg' %}" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="/blog-education">Boosting your immunity has become necessary in this time. There are several new
+                diseases which are emerging these days. Here are some ways which are effective in boosting your immune
+                system.</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-education">John
+                    Doe</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-education"><time
+                      datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-education">12
+                    Comments</a></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                1. Start your day with a healthy diet involving fruits, juices, milk etc.
+                2. Proper exercise is necessary every day.
+              </p>
+              <div class="read-more">
+                <a href="/blog-education">Read More</a>
               </div>
             </div>
 
@@ -71,16 +151,22 @@
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12 Comments</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a>
+                </li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time
+                      datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12
+                    Comments</a></li>
               </ul>
             </div>
 
             <div class="entry-content">
               <p>
-                Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
+                Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo
+                libero rerum voluptatem pariatur nam.
+                Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia
+                molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et
+                sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
               </p>
               <div class="read-more">
                 <a href="/blog-single">Read More</a>
@@ -101,15 +187,19 @@
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12 Comments</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a>
+                </li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time
+                      datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12
+                    Comments</a></li>
               </ul>
             </div>
 
             <div class="entry-content">
               <p>
-                Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+                Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et.
+                Eum temporibus fugiat voluptate enim tenetur sunt omnis.
                 Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
               </p>
               <div class="read-more">
@@ -126,21 +216,28 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/blog-single">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
+              <a href="/blog-single">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius
+                exercitationem.</a>
             </h2>
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12 Comments</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog-single">John Doe</a>
+                </li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blog-single"><time
+                      datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blog-single">12
+                    Comments</a></li>
               </ul>
             </div>
 
             <div class="entry-content">
               <p>
-                Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
+                Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum
+                enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
+                Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui
+                voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat
+                magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
               </p>
               <div class="read-more">
                 <a href="/blog-single">Read More</a>

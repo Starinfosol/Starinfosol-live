@@ -25,20 +25,27 @@ SECRET_KEY = 'django-insecure-kcm-6#mfl54fxo_rt4h#^pax6mbfhrdgi2lmz+g8csev78x)b1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ["starinfosol-live.herokuapp.com"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    
+    'admin_interface',
+    'colorfield',
     'home.apps.HomeConfig',
+    'appointment.apps.AppointmentConfig',
+    'blogs.apps.BlogsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    
 ]
 
 MIDDLEWARE = [
@@ -121,11 +128,37 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = 'staticfiles'
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = "/var/www/example.com/static/"
+
+
+if DEBUG:
+     STATICFILES_DIRS = [
+         os.path.join(BASE_DIR, 'static')
+         ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Base url to serve media files
+MEDIA_URL = '/media/'
+
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Email send function manual files#############################
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.Emailbackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'starinfosol954@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Starinfosol@0954#$%^&'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False

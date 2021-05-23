@@ -8,45 +8,36 @@
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-  <div id="heroCarousel" data-bs-slide-to="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
     <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
     <div class="carousel-inner" role="listbox">
 
       <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <img src="{% static 'assets/img/slide/slide-001.jpg' %}" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <div class="container">
-            <h2>Welcome to <span>Starinfosol</span></h2>
-            <p>Home Services provider to provide your essential services.</p>
-            <a href="#about" class="btn-get-started scrollto"><span class="d-none d-md-inline">Read </span>More</a>
-          </div>
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-001.jpg' %});">
+        <div class="container">
+          <h2>Welcome to <span>Starinfosol</span></h2>
+          <p>Home Services provider to provide your essential services.</p>
+          <a href="#about" class="btn-get-started scrollto">Read More</a>
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-item">
-        <img src="{% static 'assets/img/slide/slide-002.jpg' %}" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <div class="container">
-            <h2>Build and grow</h2>
-            <p>Get all your essential services in one place.</p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
-          </div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-002.jpg' %});">
+        <div class="container">
+          <h2>Build and grow</h2>
+          <p>Get all your essential services in one place.</p>
+          <a href="#about" class="btn-get-started scrollto">Read More</a>
         </div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="carousel-item">
-        <img src="{% static 'assets/img/slide/slide-004.jpg' %}" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <div class="container">
-            <h2>Complete your Dreams</h2>
-            <p>Fastest And Most Efficient Work</p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
-          </div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-003.jpg' %});">
+        <div class="container">
+          <h2>Complete your Dreams</h2>
+          <p>Fastest And Most Efficient Work</p>
+          <a href="#about" class="btn-get-started scrollto">Read More</a>
         </div>
       </div>
 
@@ -54,12 +45,10 @@
 
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
     </a>
 
     <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
       <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
     </a>
 
   </div>
@@ -83,7 +72,8 @@
           <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="fas fa-pills"></i></div>
             <h4 class="title"><a href="">Medicines</a></h4>
-            <p class="description">medical information written for you to make informed decisions about your health concerns.</p>
+            <p class="description">medical information written for you to make informed decisions about your health
+              concerns.</p>
           </div>
         </div>
 
@@ -114,8 +104,9 @@
 
       <div class="text-center">
         <h3>In an emergency? Need help now?</h3>
-        <p> If you have booked the service and for any reason you do not want the service, then no matter you can cancel your booking at any time.</p>
-        <a class="cta-btn scrollto" href="#appointment">Make an Make an Appointment</a>
+        <p> If you have booked the service and for any reason you do not want the service, then no matter you can
+          cancel your booking at any time.</p>
+        <a class="cta-btn scrollto" href="#appointmentModal">Make an Appointment</a>
       </div>
 
     </div>
@@ -127,23 +118,27 @@
 
       <div class="section-title">
         <h2>About Us</h2>
-        <p> Welcome to Starinfosol - do you need a job, we are providing you a platform where you can join us and take a
+        <p> Welcome to Starinfosol - do you need a job, we are providing you a platform where you can join us and take
+          a
           training of some of the various services we provide and join us to create a better future for you.</p>
       </div>
 
       <div class="row">
         <div class="col-lg-6" data-aos="fade-right">
-          <a href="#"><img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt=""></a>
+          <a href="#"><img src="{% static 'assets/img/About.jpg' %}" class="img-fluid" alt=""></a>
         </div>
 
         <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>GET ALL YOUR ESSENTIAL SERVICES IN ONE PLACE</h3>
           <p class="fst-italic"> Starinfosol mission is to offer residents of the Local area the best service in the
-            area. We are committed to providing the service quality and value that our customers expect. To improve your
-            strength and grow up your personality. Self-motivated and hardworking with positive attitude towards career
+            area. We are committed to providing the service quality and value that our customers expect. To improve
+            your
+            strength and grow up your personality. Self-motivated and hardworking with positive attitude towards
+            career
             and life. To provide services, every member of our team is fully trained and our team provides better
             services with taking care of your safety. Provides you advanced and long-lasting services. Our team always
-            remains ready to provide you better services in shorter time. Your security is first attention of our team.
+            remains ready to provide you better services in shorter time. Your security is first attention of our
+            team.
           </p>
           <ul>
             <li><i class="bi bi-check-circle"></i> We utilize your feedback to improve quality of our services.</li>
@@ -172,10 +167,10 @@
         <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
           <div class="count-box">
             <i class="fas fa-user-md"></i>
-            <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1"
               class="purecounter"></span>
 
-            <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>
+            <p><strong>Doctors</strong> Healthcare</p>
             <a href="#">Find out more &raquo;</a>
           </div>
         </div>
@@ -183,9 +178,9 @@
         <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
           <div class="count-box">
             <i class="far fa-hospital"></i>
-            <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>
+            <p><strong>Departments</strong> Multiple type of Services, inculding Healthcare</p>
             <a href="#">Find out more &raquo;</a>
           </div>
         </div>
@@ -195,7 +190,8 @@
             <i class="fas fa-flask"></i>
             <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>
+            <p><strong>Research Lab</strong> "creative and systematic work undertaken to increase the stock of
+              knowledge"</p>
             <a href="#">Find out more &raquo;</a>
           </div>
         </div>
@@ -205,7 +201,7 @@
             <i class="fas fa-award"></i>
             <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p><strong>Awards</strong> rerum asperiores dolor molestiae doloribu</p>
+            <p><strong>Awards</strong> that recognize and promote the talen</p>
             <a href="#">Find out more &raquo;</a>
           </div>
         </div>
@@ -241,12 +237,13 @@
           <div class="icon-box mt-5">
             <i class="bx bx-shield"></i>
             <h4>Your safety is our priority</h4>
-            <p>Every member of our team is fully trained and our team provides better services while taking care of your
+            <p>Every member of our team is fully trained and our team provides better services while taking care of
+              your
               safety.</p>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
-          <img src="{% static 'assets/img/features0954.jpg' %}" class="img-fluid" alt="">
+          <img src="{% static 'assets/img/features.jpg' %}" class="img-fluid" alt="">
         </div>
       </div>
 
@@ -288,7 +285,8 @@
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon"><i class="bi bi-brightness-high"></i></div>
           <h4 class="title"><a href="">freedom</a></h4>
-          <p class="description">If you have booked the service and for any reason you do not want the service, then no
+          <p class="description">If you have booked the service and for any reason you do not want the service, then
+            no
             matter you can cancel your booking at any time.</p>
         </div>
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
@@ -303,7 +301,7 @@
   </section><!-- End Services Section -->
 
   <!-- ======= Appointment Section ======= -->
-  <section id="appointment" class="appointment section-bg">
+  <!-- <section id="appointment" class="appointment section-bg">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -312,55 +310,58 @@
           in few minutes.</p>
       </div>
 
-      <form action="forms/appointment.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
-        data-aos-delay="100">
+      <form id="appointment-form" action="https://formspree.io/f/xoqyjovv" method="POST" role="form"
+        class="php-email-form" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
-          <div class="col-md-4 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+            </div>
           </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="datetime" name="date" class="form-control datepicker" id="date"
+                placeholder="Appointment Date" required>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="department" id="department" class="form-select">
+                <option value="">Select Department</option>
+                <option value="Allopathic">Allopathic</option>
+                <option value="Homeopathy">Homeopathy</option>
+                <option value="Ayurvedic">Ayurvedic</option>
+              </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Dr. Bhuvneshwer Janghela">Dr. Bhuvneshwer</option>
+                <option value="Dr. Ishwari Verma">Dr. Ishwari</option>
+                <option value="Dr. Shriwastav">Dr. Shriwastav</option>
+              </select>
+            </div>
           </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 form-group mt-3">
-            <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date"
-              required>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="department" id="department" class="form-select">
-              <option value="">Select Department</option>
-              <option value="Department 1">Allopathic</option>
-              <option value="Department 2">Homeopathy</option>
-              <option value="Department 3">Ayurvedic</option>
-            </select>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="doctor" id="doctor" class="form-select">
-              <option value="">Select Doctor</option>
-              <option value="Doctor 1">Dr. Bhuvneshwer</option>
-              <option value="Doctor 2">Dr. Ishwari</option>
-              <option value="Doctor 3">Dr. Shriwastav</option>
-            </select>
-          </div>
-        </div>
 
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit">Make an Appointment</button></div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          </div>
+          <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+            </div> -->
+          <!-- <div class="text-center"><button id="appointment-form-button" type="submit">Make an Appointment</button>
+          </div>
+          <p class="text-center my-3" data-aos="zoom-in" id="appointment-form-status"></p>
       </form>
 
     </div>
-  </section><!-- End Appointment Section -->
+  </section>End Appointment Section --> -->
 
   <!-- ======= Departments Section ======= -->
   <section id="departments" class="departments">
@@ -368,9 +369,7 @@
 
       <div class="section-title">
         <h2>Departments</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <p>Departmentalization, division of a larger organization into parts with specific responsibility.</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -379,25 +378,27 @@
             <li class="nav-item">
               <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
                 <h4>Cardiology</h4>
-                <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+                <p>Cardiac electrophysiology is the science of elucidating, diagnosing, and treating the electrical
+                  activities of the heart.</p>
               </a>
             </li>
             <li class="nav-item mt-2">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
                 <h4>Neurology</h4>
-                <p>Voluptas vel esse repudiandae quo excepturi.</p>
+                <p>These can affect the central nervous system (brain and spinal cord), the peripheral nervous system,
+                  the autonomic nervous system, and the muscular system.</p>
               </a>
             </li>
             <li class="nav-item mt-2">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                <h4>Hepatology</h4>
-                <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
+                <h4>Homeopathy</h4>
+                <p>Homeopathy or homoeopathy is a pseudoscientific system of alternative medicine.</p>
               </a>
             </li>
             <li class="nav-item mt-2">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                <h4>Pediatrics</h4>
-                <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
+                <h4>Allopathic</h4>
+                <p>Allopathic medicine, or allopathy, refers to science-based, modern medicine.</p>
               </a>
             </li>
           </ul>
@@ -406,39 +407,43 @@
           <div class="tab-content">
             <div class="tab-pane active show" id="tab-1">
               <h3>Cardiology</h3>
-              <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a
-                videna mareta paulona marka</p>
+              <p class="fst-italic">Cardiac electrophysiology is the science of elucidating, diagnosing, and treating
+                the electrical activities of the heart.</p>
               <img src="{% static 'assets/img/departments-1.jpg' %}" alt="" class="img-fluid">
-              <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit
-                magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil.
-                Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+              <p>Cardiology (from Greek καρδίᾱ kardiā, "heart" and -λογία -logia, "study") is a branch of medicine
+                that deals with the disorders of the heart as well as some parts of the circulatory system. The field
+                includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart
+                failure, valvular heart disease and electrophysiology. Physicians who specialize in this field of
+                medicine are called cardiologists, a specialty of internal medicine. Pediatric cardiologists are
+                pediatricians who specialize in cardiology.</p>
             </div>
             <div class="tab-pane" id="tab-2">
               <h3>Neurology</h3>
-              <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a
-                videna mareta paulona marka</p>
+              <p class="fst-italic">These can affect the central nervous system (brain and spinal cord), the
+                peripheral nervous system, the autonomic nervous system, and the muscular system.</p>
               <img src="{% static 'assets/img/departments-2.jpg' %}" alt="" class="img-fluid">
-              <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit
-                magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil.
-                Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+              <p>A neurologist is a physician specializing in neurology and trained to investigate, or diagnose and
+                treat neurological disorders.[2] Neurologists may also be involved in clinical research, clinical
+                trials, and basic or translational research. While neurology is a nonsurgical specialty, its
+                corresponding surgical specialty is neurosurgery.[2]</p>
             </div>
             <div class="tab-pane" id="tab-3">
-              <h3>Hepatology</h3>
-              <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a
-                videna mareta paulona marka</p>
+              <h3>Homeopathy</h3>
+              <p class="fst-italic">Homeopathy or homoeopathy is a pseudoscientific system of alternative medicine.
+              </p>
               <img src="{% static 'assets/img/departments-3.jpg' %}" alt="" class="img-fluid">
-              <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit
-                magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil.
-                Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+              <p>Homeopathy or homoeopathy is a pseudoscientific[1][2][3][4] system of alternative medicine. It was
+                conceived in 1796 by the German physician Samuel Hahnemann. Its practitioners, called homeopaths,
+                believe that a substance that causes symptoms of a disease in healthy people can cure similar symptoms
+                in sick people; this doctrine is called similia similibus curentur, or "like cures like".</p>
             </div>
             <div class="tab-pane" id="tab-4">
-              <h3>Pediatrics</h3>
-              <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a
-                videna mareta paulona marka</p>
-              <img src="{% static 'assets/img/departments-4.jpg' %}" alt="" class="img-fluid">
-              <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit
-                magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil.
-                Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+              <h3>Allopathic</h3>
+              <p class="fst-italic">Allopathic medicine, or allopathy, refers to science-based, modern medicine.</p>
+              <img src="{% static 'assets/img/departments-04.jpg' %}" alt="" class="img-fluid">
+              <p>Allopathic medicine, or allopathy, refers to science-based, modern medicine.[1][2] There are regional
+                variations in usage of the term. In the United States, the term is used to contrast with osteopathic
+                medicine, especially in the field of medical education.</p>
             </div>
           </div>
         </div>
@@ -453,7 +458,8 @@
 
       <div class="section-title">
         <h2>Testimonials</h2>
-        <p>Provides you advanced and long-lasting services. Our team always remains ready to provide you better services
+        <p>Provides you advanced and long-lasting services. Our team always remains ready to provide you better
+          services
           in shorter time. Your security is first attention of our team.</p>
       </div>
 
@@ -520,6 +526,34 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Provides you advanced and long-lasting services. Our team always remains ready to provide you better
+                services in shorter time. Your security is first attention of our team.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="{% static 'assets/img/testimonials/testimonials-006.jpg' %}" class="testimonial-img" alt="">
+              <h3>Lokesh verma</h3>
+              <h4>Busniessmen</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Facilitator, a position within an organization or business with significant responsibilities for
+                acting as a liaison between departments, stakeholders and information
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="{% static 'assets/img/testimonials/testimonials-0044.jfif' %}" class="testimonial-img" alt="">
+              <h3>Er. Divya Patel</h3>
+              <h4>Coordinator</h4>
+            </div>
+          </div>End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 we are providing you a platform where you can join us and take a training of some of the various
                 services we provide and join us to create a better future for you.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
@@ -527,6 +561,48 @@
               <img src="{% static 'assets/img/testimonials/testimonials-005.jpg' %}" class="testimonial-img" alt="">
               <h3>Er. Shubham Verma</h3>
               <h4>Entrepreneur</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Our team always remains ready to provide you better
+                services in shorter time. Your security is first attention of our team.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="{% static 'assets/img/testimonials/testimonials.jpg' %}" class="testimonial-img" alt="">
+              <h3>Er. Swati Malik</h3>
+              <h4>Coordinator</h4>
+            </div>
+          </div>End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Finance Department is the part of an organization that is responsible for acquiring funds for the firm,
+                managing funds within the organization and planning for the expenditure of funds on various assets.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="{% static 'assets/img/testimonials/testimonials-009.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Jayesh Thakur</h3>
+              <h4>Finance</h4>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Our team always remains ready to provide you better
+                services in shorter time. Your security is first attention of our team.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="{% static 'assets/img/testimonials/testimonials-0088.jpeg' %}" class="testimonial-img" alt="">
+              <h3>Tarun Verma</h3>
+              <h4>Coordinator</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -551,7 +627,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="100">
             <div class="member-img">
-              <img src="{% static 'assets/img/doctors/doctors-001.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/doctors/doctors-0030.jpg' %}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -569,7 +645,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="200">
             <div class="member-img">
-              <img src="{% static 'assets/img/doctors/doctors-004.jpeg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/doctors/doctors-0040.jpg' %}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -605,7 +681,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="member" data-aos="fade-up" data-aos-delay="400">
             <div class="member-img">
-              <img src="{% static 'assets/img/doctors/doctors-002.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/doctors/doctors-006.jpg' %}" class="img-fluid" alt="">
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -614,8 +690,8 @@
               </div>
             </div>
             <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Neurosurgeon</span>
+              <h4>Lokesh Verma</h4>
+              <span>Distributor</span>
             </div>
           </div>
         </div>
@@ -631,35 +707,30 @@
 
       <div class="section-title">
         <h2>Gallery</h2>
-        <p>Our team always remains ready to provide you better services in shorter time. Your security is first attention of our team.</p>
+        <p>Our team always remains ready to provide you better services in shorter time. Your security is first
+          attention of our team.</p>
       </div>
 
       <div class="gallery-slider swiper-container">
         <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-1.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-2.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-3.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-4.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-5.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-6.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-6.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-7.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-7.jpg' %}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox"
-              href="{% static 'assets/img/gallery/gallery-8.jpg' %}"><img
-                src="{% static 'assets/img/gallery/gallery-8.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-001.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-2.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-003.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-004.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-5.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-6.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-7.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-008.jpg' %}"
+                class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-9.jpg' %}"
+                class="img-fluid" alt=""></a></div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -667,92 +738,90 @@
     </div>
   </section><!-- End Gallery Section -->
 
-   <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing">
-    <div class="container" data-aos="fade-up">
+  <!-- ======= Pricing Section ======= -->
+  <!-- <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
 
-      <div class="section-title">
-        <h2>Pricing</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>A pricing strategy is a model or method used to establish the best price for a product or service.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="box" data-aos="fade-up" data-aos-delay="100">
+              <h3>Free</h3>
+              <h4><sup>₹</sup>00<span> / month</span></h4>
+              <ul>
+                <li class="na">Aida dere</li>
+                <li class="na">Nec feugiat nisl</li>
+                <li class="na">Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+              <h3>Business</h3>
+              <h4><sup>₹</sup>00<span> / month</span></h4>
+              <ul>
+                <li class="na">Aida dere</li>
+                <li class="na">Nec feugiat nisl</li>
+                <li class="na">Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+              <h3>Developer</h3>
+              <h4><sup>₹</sup>00<span> / month</span></h4>
+              <ul>
+                <li class="na">Aida dere</li>
+                <li class="na">Nec feugiat nisl</li>
+                <li class="na">Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="400">
+              <span class="advanced">Advanced</span>
+              <h3>Ultimate Services</h3>
+              <h4><sup>₹</sup>00<span> / month</span></h4>
+              <ul>
+                <li class="na">Aida dere</li>
+                <li class="na">Nec feugiat nisl</li>
+                <li class="na">Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6">
-          <div class="box" data-aos="fade-up" data-aos-delay="100">
-            <h3>Free</h3>
-            <h4><sup>$</sup>0<span> / month</span></h4>
-            <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li class="na">Pharetra massa</li>
-              <li class="na">Massa ultricies mi</li>
-            </ul>
-            <div class="btn-wrap">
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-          <div class="box featured" data-aos="fade-up" data-aos-delay="200">
-            <h3>Business</h3>
-            <h4><sup>$</sup>19<span> / month</span></h4>
-            <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li class="na">Massa ultricies mi</li>
-            </ul>
-            <div class="btn-wrap">
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-          <div class="box" data-aos="fade-up" data-aos-delay="300">
-            <h3>Developer</h3>
-            <h4><sup>$</sup>29<span> / month</span></h4>
-            <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li>Massa ultricies mi</li>
-            </ul>
-            <div class="btn-wrap">
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-          <div class="box" data-aos="fade-up" data-aos-delay="400">
-            <span class="advanced">Advanced</span>
-            <h3>Ultimate</h3>
-            <h4><sup>$</sup>49<span> / month</span></h4>
-            <ul>
-              <li>Aida dere</li>
-              <li>Nec feugiat nisl</li>
-              <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li>Massa ultricies mi</li>
-            </ul>
-            <div class="btn-wrap">
-              <a href="#" class="btn-buy">Buy Now</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
+    </section> -->
   <!-- End Pricing Section -->
 
   <!-- ======= Frequently Asked Questioins Section ======= -->
@@ -761,86 +830,108 @@
 
       <div class="section-title">
         <h2>Frequently Asked Questioins</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <p>The letters FAQ stands for Frequently Asked Questions. A FAQ page is usually a list of common
+          questions people have asked about a specific product or service.</p>
       </div>
 
       <ul class="faq-list">
 
         <li>
-          <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus
-            urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+          <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">COVID-19 affects different people in
+            different ways? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+          </div>
           <div id="faq1" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-              gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              Most common symptoms:
+              fever,
+              dry cough,
+              tiredness &
+              Less common symptoms:
+              aches and pains,
+              sore throat,
+              diarrhoea,
+              conjunctivitis,
+              headache,
+              loss of taste or smell,
+              a rash on skin, or discolouration of fingers or toes &
+              Serious symptoms:
+              difficulty breathing or shortness of breath,
+              chest pain or pressure,
+              loss of speech or movement,
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim
-            nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i
-              class="bi bi-chevron-up icon-close"></i></div>
+          <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">When do side effects of covid-19
+            vaccine start? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+          </div>
           <div id="faq2" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-              donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-              ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              When exactly symptoms set in following your dose will vary from person to person, but Adams generalizes
+              that you can expect your side effects to hit within 24 hours of your dose, and not to stretch 7 days
+              post your vaccination.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing
-            elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i
-              class="bi bi-chevron-up icon-close"></i></div>
+          <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What are foods to avoid during the
+            COVID-19 pandemic? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+          </div>
           <div id="faq3" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-              integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-              Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+              Reduce foods such as red and fatty meats, butter and full-fat dairy products, palm oil, coconut oil,
+              solid shortening and lard. Avoid trans fats as much as possible. Read nutrition labels to ensure that
+              partially hydrogenated oils are not listed in the ingredients.
+
+              If food labels are not available, avoid foods which commonly contain trans fats such as processed and
+              fried foods, like doughnuts and baked goods – including biscuits, pie crusts, frozen pizzas, cookies,
+              crackers and margarines that include partially hydrogenated fat.
+
+              If in doubt, minimally processed foods and ingredients are better choices. Consume enough fibre Fibre
+              contributes to a healthy digestive system and offers a prolonged feeling of fullness, which helps
+              prevent overeating.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam
-            eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i
+          <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What are the recommended preventive
+            measures for COVID-19? <i class="bi bi-chevron-down icon-show"></i><i
               class="bi bi-chevron-up icon-close"></i></div>
           <div id="faq4" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-              donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-              ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              Recommended preventive measures include social distancing, wearing a face mask in public, ventilation
+              and air-filtering, hand washing, covering one's mouth when sneezing or coughing, disinfecting surfaces,
+              and monitoring and self-isolation for people exposed or symptomatic.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam
-            aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i
+          <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">What are some of the emergency
+            warning signs for someone with the coronavirus disease? <i class="bi bi-chevron-down icon-show"></i><i
               class="bi bi-chevron-up icon-close"></i></div>
           <div id="faq5" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
-              vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
-              gravida quis blandit turpis cursus in
+              Call a doctor or hospital right away if you have one or more of these COVID-19 symptoms: Trouble
+              breathing. Constant pain or pressure in your chest. Bluish lips or face.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare.
-            Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i
+          <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Can the coronavirus disease be
+            transmitted in hot or humid climates? <i class="bi bi-chevron-down icon-show"></i><i
               class="bi bi-chevron-up icon-close"></i></div>
           <div id="faq6" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-              nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
-              tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
-              fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              From the evidence so far, the COVID-19 virus can be transmitted in ALL AREAS, including areas with hot
+              and humid weather. Regardless of climate, adopt protective measures if you live in, or travel to an area
+              reporting COVID-19. The best way to protect yourself against COVID-19 is by frequently cleaning your
+              hands. By doing this you eliminate viruses that may be on your hands and avoid infection that could
+              occur by then touching your eyes, mouth, and nose.
             </p>
           </div>
         </li>
@@ -856,8 +947,10 @@
 
       <div class="section-title">
         <h2>Contact</h2>
-        <p>we provide and join us to create a better future for you. If you want to learn your new work and change your
-          life then come join us in our training program with a small amount and after training, we will prepare you for
+        <p>we provide and join us to create a better future for you. If you want to learn your new work and change
+          your
+          life then come join us in our training program with a small amount and after training, we will prepare you
+          for
           services in our company and make your life a Will provide the path.</p>
       </div>
 
@@ -865,7 +958,7 @@
 
     <div>
       <iframe style="border:0; width: 100%; height: 350px;"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14790.082407146647!2d78.8991787188854!3d22.067926652893444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd565ec995374f5%3A0xa7d715229331a600!2sVishnu%20Nagar%2C%20Chhindwara%2C%20Madhya%20Pradesh%20480001!5e0!3m2!1sen!2sin!4v1620542067126!5m2!1sen!2sin"
         frameborder="0" allowfullscreen></iframe>
     </div>
 
@@ -880,7 +973,7 @@
               <div class="info-box">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>Near Keishna Tower, INDIA, CWA 480001</p>
+                <p>Near Krishna Tower, INDIA, CWA 480001</p>
               </div>
             </div>
             <div class="col-md-6">
@@ -894,7 +987,7 @@
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+91 9074919296<br>+91 9770444954</p>
+                <p>+91 9074919296<br>+91 9669463203</p>
               </div>
             </div>
           </div>
@@ -902,7 +995,8 @@
         </div>
 
         <div class="col-lg-6">
-          <form action="{% static 'forms/mail.php' %}" method="post" role="form" class="php-email-form">
+          <form action="/contact" method="post">
+            {% csrf_token %}
             <div class="row">
               <div class="col form-group mt-3">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -912,17 +1006,14 @@
               </div>
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Subject" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" id="body" name="message" rows="5" placeholder="Message" required></textarea>
+              <textarea class="form-control" name="content" id="content" rows="5" placeholder="Message" required></textarea>
             </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button onclick="sendEmail()" value="Send An Email" type="submit">Send Message</button></div>
+            {% csrf_token %}
+            <div class="text-center"><button class="btn btn-primary btn-sm" id="my-form-button" type="submit">Send Message</button></div>
+            <!-- <p class="text-center my-3" data-aos="zoom-in" id="my-form-status"></p> -->
           </form>
         </div>
 
