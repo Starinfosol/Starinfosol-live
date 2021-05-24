@@ -29,7 +29,9 @@ def health(request):
 
 
 def blogs(request):
-    return render(request, 'blogs.html')
+    allPosts = Post.objects.all()
+    context = {'allPosts': allPosts}
+    return render(request, 'blogs.html', context)
 
 
 def updates(request):

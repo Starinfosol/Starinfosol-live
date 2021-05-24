@@ -1,56 +1,209 @@
 {% extends 'base.html' %}
 
 {% block title %}Updates{% endblock title %}
-{% block blogactive %} active {% endblock blogactive %} 
+{% block blogactive %} active {% endblock blogactive %}
 
 {% block body %}
-
 {% load static %}
-<!-- ======= Breadcrumbs ======= -->
-<section id="breadcrumbs" class="breadcrumbs">
-    <div class="container">
 
-        <ol>
-            <li><a href="/">Home</a></li>
-            <li>Blogs</li>
-            <form method="get" action="/search" class="form-inline my-2 my-lg-0 mx-3">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" id="query">
-                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
-            </form>
-        </ol>
-        <h2>Updates</h2>
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
 
-    </div>
-    
-</section><!-- End Breadcrumbs -->
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Blogs</li>
+            </ol>
+            <h2>Updates</h2>
 
-<div class="container my-3">
-    <h2>Articles by Starinfosol</h2>
-    {% for post in allPosts %}
-    <div
-        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Article by {{post.author}}</strong>
-            <h3 class="mb-0">{{post.title}}</h3>
-            <div class="mb-1 text-muted">{{post.datetime}}</div>
-            <p class="card-text mb-auto">{{post.content| truncatechars:500}}</p>
-            <div class="my-2">
-                <a href="/blogs/{{post.slug}}" role="button" class="btn btn-primary">Continue reading</a>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+        
+        <div class="container" data-aos="fade-up">
+            <h2>Articles by Starinfosol</h2>
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    {% for post in allPosts %}
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="{{post.image.url}}" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="/updates">{{post.title}}</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                                        href="/updates">Article by {{post.author}}</a>
+                                </li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                        href="/updates"><time datetime="2020-01-01">{{post.timeStamp}}</time></a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                        href="/updates">4
+                                        Comments</a></li>
+                                <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                        href="/updates">{{post.slug}}</a></li> -->
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p class="card-text mb-auto">
+                                {{post.content|safe}}
+                                <!-- {{post.content| truncatechars:500}} -->
+                            </p>
+                            <div class="read-more">
+                                <a href="/updates">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="entry-footer">
+                            <i class="bi bi-folder"></i>
+                            <ul class="cats">
+                                <li><a href="#">{{post.slug}}</a></li>
+                            </ul>
+
+                            <i class="bi bi-tags"></i>
+                            <ul class="tags">
+                                <li><a href="#">Creative</a></li>
+                                <li><a href="#">Tips</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+                    {% endfor %}
+
+                    <div class="blog-comments">
+
+                        <h4 class="comments-count">Comments</h4>
+
+                        <div id="comment-1" class="comment">
+                            <div class="d-flex">
+                                <div class="comment-img"><img src="{% static 'assets/img/blog/comments-1.jpg' %}"
+                                        alt=""></div>
+                                <div>
+                                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i
+                                                class="bi bi-reply-fill"></i> Reply</a></h5>
+                                    <time datetime="2020-01-01">May 24, 2021, 10:39 a.m.</time>
+                                    <p>
+                                        “If future generations are to remember us more with gratitude than sorrow, we
+                                        must achieve more than just the miracles of technology. We must also leave them
+                                        a glimpse of the world as it was created, not just as it looked when we got
+                                        through with it.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End comment #1 -->
+
+                        <div class="reply-form">
+                            <h4>Leave a Reply</h4>
+                            <p>Your email address will not be published. Required fields are marked * </p>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <input name="website" type="text" class="form-control"
+                                            placeholder="Your Website">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <textarea name="comment" class="form-control"
+                                            placeholder="Your Comment*"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                            </form>
+
+                        </div>
+
+                    </div><!-- End blog comments -->
+
+                </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar">
+
+                        <h3 class="sidebar-title">Search</h3>
+                        <div class="sidebar-item search-form">
+                            <form method="get" action="/search">
+                                <input type="text" placeholder="Results" aria-label="Search" name="query" id="query">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                            </form>
+                        </div><!-- End sidebar search formn-->
+
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="sidebar-item categories">
+                            <ul>
+                                <li><a href="#">General <span>(25)</span></a></li>
+                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                                <li><a href="#">Travel <span>(5)</span></a></li>
+                                <li><a href="#">Design <span>(22)</span></a></li>
+                                <li><a href="#">Creative <span>(8)</span></a></li>
+                                <li><a href="#">Educaion <span>(14)</span></a></li>
+                            </ul>
+                        </div><!-- End sidebar categories-->
+
+                        <h3 class="sidebar-title">Recent Posts</h3>
+                        <div class="sidebar-item recent-posts">
+                            {% for post in allPosts %}
+                            <div class="post-item clearfix">
+                                <img src="{{post.image.url}}" alt="">
+                                <h4><a href="/updates">{{post.title}}</a></h4>
+                                <time datetime="2020-01-01">{{post.timeStamp}}</time>
+                            </div>
+                            {% endfor %}
+
+                        </div><!-- End sidebar recent posts-->
+
+                        <h3 class="sidebar-title">Tags</h3>
+                        <div class="sidebar-item tags">
+                            <ul>
+                                <li><a href="#">App</a></li>
+                                <li><a href="#">IT</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Mac</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Creative</a></li>
+                                <li><a href="#">Studio</a></li>
+                                <li><a href="#">Smart</a></li>
+                                <li><a href="#">Tips</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+                        </div><!-- End sidebar tags-->
+
+                    </div><!-- End sidebar -->
+
+                </div><!-- End blog sidebar -->
+
             </div>
 
         </div>
-        <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em">Thumbnail</text>
-            </svg>
-        </div>
-    </div>
-    <img src="{{ img.image.url }}" >
-    {% endfor %}
-</div>
-
+        
+    </section><!-- End Blog Single Section -->
+</main><!-- End #main -->
 
 {% endblock body %}

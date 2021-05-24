@@ -7,12 +7,13 @@ from django.utils.html import format_html
 
 class PostAdmin(admin.ModelAdmin):
         readonly_fields=['photo_tag']
-        list_display = ('title', 'author', 'photo_tag', 'tags', 'slug', 'content', 'is_deleted')
+        list_display = ('title', 'author', 'photo_tag', 'tags', 'slug', 'less_content', 'is_deleted')
         list_filter = ('is_deleted', 'created_at', ('author', admin.EmptyFieldListFilter))
         radio_fields = {"tags" : admin.HORIZONTAL}
         list_per_page = 2
 
-
+        def less_content(self, obj):
+                return obj.content[:50]
 
         def photo_tag(self, obj):
                 return format_html(f'<img src="/media/{obj.image}" style="height:100px;width:100px>')
