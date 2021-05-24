@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kcm-6#mfl54fxo_rt4h#^pax6mbfhrdgi2lmz+g8csev78x)b1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
+# DEBUG = True
 # ALLOWED_HOSTS = []
+
+DEBUG = False
 ALLOWED_HOSTS = ["starinfosol-live.herokuapp.com"]
 
 
@@ -155,10 +158,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Email send function manual files#############################
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.Emailbackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'starinfosol954@gmail.com'
-# EMAIL_HOST_PASSWORD = 'Starinfosol@0954#$%^&'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'starinfosol954@gmail.com'
+EMAIL_HOST_PASSWORD = 'Starinfosol@0954'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
+
+
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'denger'
+}

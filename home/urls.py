@@ -19,7 +19,7 @@ urlpatterns = [
     path('signup', views.handleSignUp, name="handleSignUp"),
     path('login', views.handeLogin, name="handleLogin"),
     path('logout', views.handelLogout, name="handleLogout"),
-    path('appointment', views.Appointment, name="Appointment"),
+    path('appointment', views.Appointmentadd, name="Appointmentadd"),
     path("Terms_conditions", views.Terms_conditions, name='Terms_conditions'),
     
     ]

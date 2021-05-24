@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -7,7 +8,7 @@ class Appointment(models.Model):
     name= models.CharField(max_length=255)
     email= models.CharField(max_length=255)
     phone= models.CharField(max_length=10)
-    date= models.DateField(auto_now=False, auto_now_add=False)
+    date= models.DateField(auto_now=False, auto_now_add=False, blank=True, null=True, default="")
     department= models.CharField(max_length=255)
     doctor= models.CharField(max_length=255)
     information= models.TextField()
