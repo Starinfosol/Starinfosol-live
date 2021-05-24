@@ -86,13 +86,13 @@ def Appointmentadd(request):
         else:
             inc = Appointment(name=name, email=email, phone=phone, date=date, department=department, doctor=doctor, information=information)
             inc.save()
-            send_mail(
-                'Appointment',
-                '{{name}}',
-                'starinfosol954@gmail.com',
-                ['starinfosol954@gmail.com'],
-                fail_silently=False,
-            )
+            # send_mail(
+            #     'Appointment',
+            #     '{{name}}',
+            #     'starinfosol954@gmail.com',
+            #     ['starinfosol954@gmail.com'],
+            #     fail_silently=False,
+            # )
             messages.success(request, "Your Appointment has been booked successfully")
     return render(request, "index.html")
 
