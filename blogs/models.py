@@ -9,9 +9,7 @@ TAGS = (('Technology', 'Technology'), ('Health service', 'Health service'), ('Ed
 class Post(models.Model):
     sno=models.AutoField(primary_key=True)
     title=models.CharField(max_length=255)
-    image=models.ImageField(upload_to= "images", default="")
-    # image = models.ImageField(upload_to ='uploads/% Y/% m/% d/')
-    # image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100,)
+    image=models.ImageField(upload_to= "images", default="blog.jpg", null=True, blank=True)
     author=models.CharField(max_length=14)
     tags=models.CharField(choices=TAGS, max_length=100, default='Technology')
     slug=models.CharField(max_length=130)
