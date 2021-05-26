@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -174,3 +177,12 @@ EMAIL_USE_TLS = True
 MESSAGE_TAGS = {
     messages.ERROR: 'denger'
 }
+
+
+
+cloudinary.config( 
+
+  cloud_name = "starinfosol", 
+  api_key = "763762277362653", 
+  api_secret = "EryGLaLVjKt_KBnpINThA6oSeMI" 
+)
