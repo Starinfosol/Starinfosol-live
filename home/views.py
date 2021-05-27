@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from appointment.models import Appointment
 from home.models import Contact
-from blogs.models import Post
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -9,52 +8,19 @@ from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse_lazy
 
 
-#################################################################################################
-
+###############################################################################
 
 def home(request):
     return render(request, "home/index.html")
-
-
-def about(request):
-    return render(request, "home/about.html")
-
 
 def index(request):
     return render(request, 'index.html')
     # return HttpResponse("this is homepage")
 
-
-def health(request):
-    return render(request, 'health.html')
-    # return HttpResponse("this is health-page")
-
-
-def blogs(request):
-    allPosts = Post.objects.all()
-    context = {'allPosts': allPosts}
-    return render(request, 'blogs.html', context)
-
-
-def updates(request):
-    allPosts = Post.objects.all()
-    context = {'allPosts': allPosts}
-    return render(request, "updates.html", context)
-
-
-def blog_single(request):
-    return render(request, 'blog-single.html')
-
-
-def blog_education(request):
-    return render(request, 'blog-education.html')
-
-
 def Terms_conditions(request):
     return render(request, 'Terms_conditions.html')
 
 ################################################################################
-
 
 def contact(request):
     if request.method == "POST":
@@ -73,7 +39,6 @@ def contact(request):
     return render(request, "index.html")
 
 ################################################################################
-
 
 def Appointmentadd(request):
     if request.method == "POST":

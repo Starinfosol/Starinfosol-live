@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Blogs{% endblock title %}
+{% block title %}Posts{% endblock title %}
+<!-- {% block blogactive %} active {% endblock blogactive %} -->
 
 {% block body %}
 {% load static %}
+{% load humanize %}
+{% load extras %}
+
 
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
@@ -14,7 +18,7 @@
                 <li><a href="/">Home</a></li>
                 <li>Blogs</li>
             </ol>
-            <h2>Updates</h2>
+            <h2>Blogpost</h2>
 
         </div>
     </section><!-- End Breadcrumbs -->
@@ -30,8 +34,6 @@
 
                 <div class="col-lg-8 entries">
 
-                    {% for post in allPosts %}
-
                     <article class="entry">
 
                         <div class="entry-img">
@@ -39,19 +41,17 @@
                         </div>
 
                         <h2 class="entry-title">
-                            <a href="{{post.slug}}">{{post.title}}</a>
+                            <a href="/blogs">{{post.title}}</a>
                         </h2>
 
                         <div class="entry-meta">
                             <ul>
                                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                        href="{{post.slug}}">Article by {{post.author}}</a>
+                                        href="/blogs">Article by {{post.author}}</a>
                                 </li>
-                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                        href="{{post.slug}}"><time datetime="2020-01-01">{{post.timeStamp}}</time></a>
-                                </li>
-                                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
-                                        href="{{post.slug}}">{{comments.count}}
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/blogs"><time
+                                            datetime="2020-01-01">{{post.timeStamp}}</time></a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/blogs">{{comments.count}}
                                         Comments</a></li>
                                 <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
                                         href="/updates">{{post.slug}}</a></li> -->
@@ -60,14 +60,15 @@
 
                         <div class="entry-content">
                             <p class="card-text mb-auto">
-                                {{post.content|safe|truncatechars:500}}
+                                {{post.content|safe}}
                                 <!-- {{post.content| truncatechars:500}} -->
                             </p>
-                            <div class="read-more">
+                            <!-- <div class="read-more">
                                 <a href="{{post.slug}}">Read More</a>
-                                <!-- {{post.slug}} -->
-                            </div>
+                            </div> -->
                         </div>
+
+
 
                         <div class="entry-footer">
                             <i class="bi bi-folder"></i>
@@ -85,9 +86,7 @@
 
                     </article><!-- End blog entry -->
 
-                    {% endfor %}
-
-                    <!-- <div class="blog-comments">
+                    <div class="blog-comments">
 
                         <h4 class="comments-count">Comments ({{comments.count}})</h4>
 
@@ -114,20 +113,73 @@
 
                         </div>
                         <div class="container">
+                            <!-- <h2> Comments</h2> -->
                             {% for comment in comments %}
                             <div class="">
                                 <div id="comment-2" class="comment">
+
                                     <div class="d-flex">
                                         <div class="comment-img"><img src="/static/assets/img/user-icon.png" alt="">
                                         </div>
                                         <div>
                                             <h5><a href="">{{comment.user.username}}</a> <a
-                                                    href="" class="reply"><i class=""></i></a>
-                                            </h5>
-                                            <time datetime="2020-01-01">{{comment.timestamp}}</time>
+                                                    href="#replyBox{{comment.sno}}" class="reply"><i
+                                                        class=""></i></a></h5>
+                                            <time datetime="2020-01-01">{{comment.timestamp| naturaltime}}</time>
                                             <p>
                                                 {{comment.comment}}
                                             </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="reply mx-0">
+                                        {% if user.is_authenticated %}
+                                        <h5><a class="reply" ><i class="bi bi-reply-fill" type="button" data-toggle="collapse"
+                                            data-target="#replyBox{{comment.sno}}" aria-expanded="false"
+                                            aria-controls="replyBox{{comment.sno}}">
+                                            Reply
+                                        </i></a></h5>
+                                        <div class="collapse" id="replyBox{{comment.sno}}">
+                                            <div class="card card-body my-2">
+                                                <form action="/blogs/postComment" method="post">
+                                                    {% csrf_token %}
+                                                    <div class="form-group">
+                                                        <label for="comment">Post a reply </label>
+                                                        <input type="text" class="form-control" name="comment"
+                                                            placeholder="Enter comment here">
+                                                        <input type="hidden" name="parentSno" value="{{comment.sno}}">
+                                                    </div>
+                                                    <input type="hidden" name="postSno" value="{{post.sno}}">
+                                                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        {% else %}
+                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="collapse"
+                                            data-target="#replyBox{{comment.sno}}" aria-expanded="false"
+                                            aria-controls="replyBox{{comment.sno}}">
+                                            Login to reply
+                                        </button>
+                                        {% endif %}
+                                        <div class="replies my-2 ">
+                                            {% for reply in replyDict|get_val:comment.sno %}
+                                            <div id="comment-reply-1" class="comment comment-reply">
+                                                <div class="d-flex">
+                                                    <div class="comment-img"><img src="/static/assets/img/user-icon.png"
+                                                            alt=""></div>
+                                                    <div>
+                                                        <h5><a href="">{{reply.user.username}}</a> <a href="#"
+                                                                class="reply"><i class=""></i></a>
+                                                        </h5>
+                                                        <time
+                                                            datetime="2020-01-01">{{reply.timestamp|naturaltime}}</time>
+                                                        <p>
+                                                            {{reply.comment}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +188,7 @@
 
                         </div>
 
-                    </div> -->
+                    </div><!-- End blog comments -->
 
                 </div><!-- End blog entries list -->
 
@@ -166,13 +218,13 @@
 
                         <h3 class="sidebar-title">Recent Posts</h3>
                         <div class="sidebar-item recent-posts">
-                            {% for post in allPosts %}
+
                             <div class="post-item clearfix">
                                 <img src="{{post.image.url}}" alt="">
                                 <h4><a href="/updates">{{post.title}}</a></h4>
                                 <time datetime="2020-01-01">{{post.timeStamp}}</time>
                             </div>
-                            {% endfor %}
+
 
                         </div><!-- End sidebar recent posts-->
 

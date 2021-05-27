@@ -9,13 +9,7 @@ from home import views
 urlpatterns = [
     path("", views.index, name='home'),
     path('contact', views.contact, name="contact"),
-    path("blogs", views.blogs, name='blogs'),
-    # path("posts", views.posts, name='posts'),
-    path('updates', views.updates, name="updates"),
-    path('health', views.health, name='health'),
-    path("blog-single", views.blog_single, name='blog-single'),
     path('search', views.search, name="search"),
-    path("blog-education", views.blog_education, name='blog-education'),
     path('signup', views.handleSignUp, name="handleSignUp"),
     path('login', views.handeLogin, name="handleLogin"),
     path('logout', views.handelLogout, name="handleLogout"),
