@@ -1,1 +1,1 @@
-web: gunicorn Starinfosol.wsgi
+web: gunicorn Starinfosol.wsgi:apllication --log-file -

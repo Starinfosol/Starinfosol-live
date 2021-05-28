@@ -15,6 +15,7 @@ from django.contrib.messages import constants as messages
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -165,12 +166,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Email send function manual files#############################
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'starinfosol954@gmail.com'
-EMAIL_HOST_PASSWORD = 'Starinfosol@0954'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'starinfosol954@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Starinfosol@0954'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
 
 
