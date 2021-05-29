@@ -15,8 +15,8 @@ from django.contrib.messages import constants as messages
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-import django_heroku
-import dj-database-url
+# import django_heroku
+# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,10 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kcm-6#mfl54fxo_rt4h#^pax6mbfhrdgi2lmz+g8csev78x)b1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
+# 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 # DEBUG = False
 
@@ -96,17 +96,17 @@ WSGI_APPLICATION = 'Starinfosol.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj-database-url.config()
-
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     'default': dj-database-url.config()
+
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -154,9 +154,9 @@ if DEBUG:
          os.path.join(BASE_DIR, 'static')
          ]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 
 # Default primary key field type
@@ -190,7 +190,6 @@ MESSAGE_TAGS = {
 
 
 cloudinary.config( 
-
   cloud_name = "starinfosol", 
   api_key = "763762277362653", 
   api_secret = "EryGLaLVjKt_KBnpINThA6oSeMI" 
