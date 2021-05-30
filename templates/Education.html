@@ -17,22 +17,21 @@
             <h2>Updates</h2>
 
         </div>
-    </section>
-    <!--End Breadcrumbs -->
+    </section><!-- End Breadcrumbs -->
 
 
     <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
 
         <div class="container" data-aos="fade-up">
-            <!-- <h2>Articles by Starinfosol</h2> -->
+            <h2>Articles by Starinfosol</h2>
 
             <div class="row">
 
                 <div class="col-lg-8 entries">
 
-                    <!-- ########################################################################################### -->
                     {% for Edu in allEdu %}
+
                     <article class="entry">
 
                         <div class="entry-img">
@@ -61,7 +60,7 @@
 
                         <div class="entry-content">
                             <p class="card-text mb-auto">
-                                {{Edu.content|safe|truncatechars:80}}
+                                {{Edu.content|safe|truncatechars:500}}
                                 <!-- {{post.content| truncatechars:500}} -->
                             </p>
                             <div class="read-more">
@@ -74,7 +73,6 @@
                             <i class="bi bi-folder"></i>
                             <ul class="cats">
                                 <li><a href="#">{{Edu.slug}}</a></li>
-                                <!-- http://www.starinfosol.com/ -->
                             </ul>
 
                             <i class="bi bi-tags"></i>
@@ -86,73 +84,122 @@
                         </div>
 
                     </article><!-- End blog entry -->
-                        {% endfor %}
-                        <!-- ########################################################################################### -->
 
+                    {% endfor %}
 
-                    </div><!-- End blog entries list -->
+                    <!-- <div class="blog-comments">
 
-                    <div class="col-lg-4">
+                        <h4 class="comments-count">Comments ({{comments.count}})</h4>
 
-                        <div class="sidebar">
-
-                            <h3 class="sidebar-title">Search</h3>
-                            <div class="sidebar-item search-form">
-                                <form method="get" action="/search">
-                                    <input type="text" placeholder="Results" aria-label="Search" name="query"
-                                        id="query">
-                                    <button type="submit"><i class="bi bi-search"></i></button>
-                                </form>
-                            </div><!-- End sidebar search formn-->
-
-                            <h3 class="sidebar-title">Categories</h3>
-                            <div class="sidebar-item categories">
-                                <ul>
-                                    <li><a href="#">General <span>(25)</span></a></li>
-                                    <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                                    <li><a href="#">Travel <span>(5)</span></a></li>
-                                    <li><a href="#">Design <span>(22)</span></a></li>
-                                    <li><a href="#">Creative <span>(8)</span></a></li>
-                                    <li><a href="#">Educaion <span>(14)</span></a></li>
-                                </ul>
-                            </div><!-- End sidebar categories-->
-
-                            <h3 class="sidebar-title">Recent Posts</h3>
-                            <div class="sidebar-item recent-posts">
-                                {% for Edu in allEdu %}
-                                <div class="post-item clearfix">
-                                    <img src="{{Edu.image.url}}" alt="">
-                                    <h4><a href="/Education">{{Edu.title}}</a></h4>
-                                    <time datetime="2020-01-01">{{Edu.timeStamp}}</time>
+                        <div class="reply-form">
+                            <h4>Leave a Reply</h4>
+                            {% if user.is_authenticated %}
+                            <p>Your email address will not be published. Required fields are marked * </p>
+                            <form action="/blogs/postComment" method='post'>
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <textarea name="comment" id="comment" class="form-control"
+                                            placeholder="Your Comment*"></textarea>
+                                    </div>
                                 </div>
-                                {% endfor %}
+                                {% csrf_token %}
+                                <input type="hidden" name="postSno" value="{{post.sno}}">
+                                <input type="hidden" name="parentSno" value="">
+                                <button type="submit" class="btn btn-primary">Post Comment</button>
 
-                            </div><!-- End sidebar recent posts-->
+                            </form>
+                            {% else %}
+                            Please login to post a comment...
+                            {% endif %}
 
-                            <h3 class="sidebar-title">Tags</h3>
-                            <div class="sidebar-item tags">
-                                <ul>
-                                    <li><a href="#">App</a></li>
-                                    <li><a href="#">IT</a></li>
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Mac</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Office</a></li>
-                                    <li><a href="#">Creative</a></li>
-                                    <li><a href="#">Studio</a></li>
-                                    <li><a href="#">Smart</a></li>
-                                    <li><a href="#">Tips</a></li>
-                                    <li><a href="#">Marketing</a></li>
-                                </ul>
-                            </div><!-- End sidebar tags-->
+                        </div>
+                        <div class="container">
+                            {% for comment in comments %}
+                            <div class="">
+                                <div id="comment-2" class="comment">
+                                    <div class="d-flex">
+                                        <div class="comment-img"><img src="/static/assets/img/user-icon.png" alt="">
+                                        </div>
+                                        <div>
+                                            <h5><a href="">{{comment.user.username}}</a> <a
+                                                    href="" class="reply"><i class=""></i></a>
+                                            </h5>
+                                            <time datetime="2020-01-01">{{comment.timestamp}}</time>
+                                            <p>
+                                                {{comment.comment}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
 
-                        </div><!-- End sidebar -->
+                        </div>
 
-                    </div><!-- End blog sidebar -->
+                    </div> -->
 
-                </div>
+                </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar">
+
+                        <h3 class="sidebar-title">Search</h3>
+                        <div class="sidebar-item search-form">
+                            <form method="get" action="/search">
+                                <input type="text" placeholder="Results" aria-label="Search" name="query" id="query">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                            </form>
+                        </div><!-- End sidebar search formn-->
+
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="sidebar-item categories">
+                            <ul>
+                                <li><a href="#">General <span>(25)</span></a></li>
+                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                                <li><a href="#">Travel <span>(5)</span></a></li>
+                                <li><a href="#">Design <span>(22)</span></a></li>
+                                <li><a href="#">Creative <span>(8)</span></a></li>
+                                <li><a href="#">Educaion <span>(14)</span></a></li>
+                            </ul>
+                        </div><!-- End sidebar categories-->
+
+                        <h3 class="sidebar-title">Recent Posts</h3>
+                        <div class="sidebar-item recent-posts">
+                            {% for Edu in allEdu %}
+                            <div class="post-item clearfix">
+                                <img src="{{Edu.image.url}}" alt="">
+                                <h4><a href="{{Edu.slug}}">{{Edu.title}}</a></h4>
+                                <time datetime="2020-01-01">{{Edu.timeStamp}}</time>
+                            </div>
+                            {% endfor %}
+
+                        </div><!-- End sidebar recent posts-->
+
+                        <h3 class="sidebar-title">Tags</h3>
+                        <div class="sidebar-item tags">
+                            <ul>
+                                <li><a href="#">App</a></li>
+                                <li><a href="#">IT</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Mac</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Creative</a></li>
+                                <li><a href="#">Studio</a></li>
+                                <li><a href="#">Smart</a></li>
+                                <li><a href="#">Tips</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+                        </div><!-- End sidebar tags-->
+
+                    </div><!-- End sidebar -->
+
+                </div><!-- End blog sidebar -->
 
             </div>
+
+        </div>
 
     </section><!-- End Blog Single Section -->
 </main><!-- End #main -->

@@ -10,9 +10,6 @@ from django.urls import reverse_lazy
 
 ###############################################################################
 
-def home(request):
-    return render(request, "home/index.html")
-
 def index(request):
     return render(request, 'index.html')
     # return HttpResponse("this is homepage")
@@ -132,15 +129,15 @@ def handleSignUp(request):
         if len(username) < 10:
             messages.error(
                 request, " Your user name must be under 10 characters")
-            return redirect('home')
+            return redirect('index')
 
         if not username.isalnum():
             messages.error(
                 request, " User name should only contain letters and numbers")
-            return redirect('home')
+            return redirect('index')
         if (pass1 != pass2):
             messages.error(request, " Passwords do not match")
-            return redirect('home')
+            return redirect('index')
 
         # Create the user
         myuser = User.objects.create_user(username, email, pass1)
@@ -148,7 +145,7 @@ def handleSignUp(request):
         myuser.last_name = lname
         myuser.save()
         messages.success(request, " Your iCoder has been successfully created")
-        return redirect('home')
+        return redirect('index')
 
     else:
         return HttpResponse("404 - Not found")
@@ -166,10 +163,10 @@ def handeLogin(request):
         if user is not None:
             login(request, user)
             messages.success(request, "Successfully Logged In")
-            return redirect("home")
+            return redirect("index")
         else:
             messages.error(request, "Invalid credentials! Please try again")
-            return redirect("home")
+            return redirect("index")
 
     return HttpResponse("404- Not found")
 
@@ -181,6 +178,6 @@ def handeLogin(request):
 def handelLogout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
-    return redirect('home')
+    return redirect('index')
 
 #################################################################################################
