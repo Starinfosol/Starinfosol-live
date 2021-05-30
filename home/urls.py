@@ -15,5 +15,7 @@ urlpatterns = [
     path('logout', views.handelLogout, name="handleLogout"),
     path('appointment', views.Appointmentadd, name="Appointmentadd"),
     path("Terms_conditions", views.Terms_conditions, name='Terms_conditions'),
+    path("Education", views.Education, name='Education'),
+    path("Pricing", views.Pricing, name='Pricing'),
     
     ]

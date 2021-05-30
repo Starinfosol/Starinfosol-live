@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from appointment.models import Appointment
-from home.models import Contact
+from home.models import Contact, Edu
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -19,6 +19,14 @@ def index(request):
 
 def Terms_conditions(request):
     return render(request, 'Terms_conditions.html')
+
+def Education(request):
+    allEdu = Edu.objects.all()
+    context = {'allEdu': allEdu}
+    return render(request, 'Education.html', context)
+
+def Pricing(request):
+    return render(request, 'Pricing.html')
 
 ################################################################################
 
@@ -71,15 +79,21 @@ def search(request):
     query = request.GET['query']
     if len(query) > 78:
         allPosts = Post.objects.none()
+        allEdu = Edu.objects.none()
     else:
         allPostsTitle = Post.objects.filter(title__icontains=query)
         allPostsAuthor = Post.objects.filter(author__icontains=query)
         allPostsContent = Post.objects.filter(content__icontains=query)
         allPosts = allPostsTitle.union(allPostsContent, allPostsAuthor)
+        allEduTitle = Edu.objects.filter(title__icontains=query)
+        allEduAuthor = Edu.objects.filter(author__icontains=query)
+        allEduContent = Edu.objects.filter(content__icontains=query)
+        allEdu = allEduTitle.union(allEduContent, allEdusAuthor)
     if allPosts.count() == 0:
         messages.warning(
             request, "No search results found. Please refine your query.")
     params = {'allPosts': allPosts, 'query': query}
+    params = {'allEdu': allEdu, 'query': query}
     return render(request, 'updates.html', params)
 
 #################################################################################################
