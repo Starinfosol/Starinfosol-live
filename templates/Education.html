@@ -17,7 +17,8 @@
             <h2>Updates</h2>
 
         </div>
-    </section> <!--End Breadcrumbs -->
+    </section>
+    <!--End Breadcrumbs -->
 
 
     <!-- ======= Blog Single Section ======= -->
@@ -32,85 +33,126 @@
 
                     <!-- ########################################################################################### -->
                     {% for Edu in allEdu %}
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="col">
-                            <div class="card">
-                                <img src="{{Edu.image.url}}" class="card-img-top"
-                                    alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{Edu.title}}</h5>
-                                    <p class="card-text">{{post.content|safe|truncatechars:300}}</p>
-                                    <button type="button" class="btn btn-secondary btn-sm">Read-more</button>
-                                </div>
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="{{Edu.image.url}}" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="{{Edu.slug}}">{{Edu.title}}</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                                        href="{{Edu.slug}}">Article by {{Edu.author}}</a>
+                                </li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                        href="{{Edu.slug}}"><time datetime="2020-01-01">{{Edu.timeStamp}}</time></a>
+                                </li>
+                                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                        href="{{Edu.slug}}">{{comments.count}}
+                                        Comments</a></li>
+                                <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                        href="/updates">{{post.slug}}</a></li> -->
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p class="card-text mb-auto">
+                                {{Edu.content|safe|truncatechars:80}}
+                                <!-- {{post.content| truncatechars:500}} -->
+                            </p>
+                            <div class="read-more">
+                                <a href="{{Edu.slug}}">Read More</a>
+                                <!-- {{post.slug}} -->
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
-                    <!-- ########################################################################################### -->
 
-
-                </div><!-- End blog entries list -->
-
-                <div class="col-lg-4">
-
-                    <div class="sidebar">
-
-                        <h3 class="sidebar-title">Search</h3>
-                        <div class="sidebar-item search-form">
-                            <form method="get" action="/search">
-                                <input type="text" placeholder="Results" aria-label="Search" name="query" id="query">
-                                <button type="submit"><i class="bi bi-search"></i></button>
-                            </form>
-                        </div><!-- End sidebar search formn-->
-
-                        <h3 class="sidebar-title">Categories</h3>
-                        <div class="sidebar-item categories">
-                            <ul>
-                                <li><a href="#">General <span>(25)</span></a></li>
-                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                                <li><a href="#">Travel <span>(5)</span></a></li>
-                                <li><a href="#">Design <span>(22)</span></a></li>
-                                <li><a href="#">Creative <span>(8)</span></a></li>
-                                <li><a href="#">Educaion <span>(14)</span></a></li>
+                        <div class="entry-footer">
+                            <i class="bi bi-folder"></i>
+                            <ul class="cats">
+                                <li><a href="#">{{Edu.slug}}</a></li>
+                                <!-- http://www.starinfosol.com/ -->
                             </ul>
-                        </div><!-- End sidebar categories-->
 
-                        <h3 class="sidebar-title">Recent Posts</h3>
-                        <div class="sidebar-item recent-posts">
-                            {% for Edu in allEdu %}
-                            <div class="post-item clearfix">
-                                <img src="{{Edu.image.url}}" alt="">
-                                <h4><a href="/Education">{{Edu.title}}</a></h4>
-                                <time datetime="2020-01-01">{{Edu.timeStamp}}</time>
-                            </div>
-                            {% endfor %}
-
-                        </div><!-- End sidebar recent posts-->
-
-                        <h3 class="sidebar-title">Tags</h3>
-                        <div class="sidebar-item tags">
-                            <ul>
-                                <li><a href="#">App</a></li>
-                                <li><a href="#">IT</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Mac</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Office</a></li>
+                            <i class="bi bi-tags"></i>
+                            <ul class="tags">
                                 <li><a href="#">Creative</a></li>
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">Smart</a></li>
                                 <li><a href="#">Tips</a></li>
                                 <li><a href="#">Marketing</a></li>
                             </ul>
-                        </div><!-- End sidebar tags-->
+                        </div>
 
-                    </div><!-- End sidebar -->
+                    </article><!-- End blog entry -->
+                        {% endfor %}
+                        <!-- ########################################################################################### -->
 
-                </div><!-- End blog sidebar -->
+
+                    </div><!-- End blog entries list -->
+
+                    <div class="col-lg-4">
+
+                        <div class="sidebar">
+
+                            <h3 class="sidebar-title">Search</h3>
+                            <div class="sidebar-item search-form">
+                                <form method="get" action="/search">
+                                    <input type="text" placeholder="Results" aria-label="Search" name="query"
+                                        id="query">
+                                    <button type="submit"><i class="bi bi-search"></i></button>
+                                </form>
+                            </div><!-- End sidebar search formn-->
+
+                            <h3 class="sidebar-title">Categories</h3>
+                            <div class="sidebar-item categories">
+                                <ul>
+                                    <li><a href="#">General <span>(25)</span></a></li>
+                                    <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                                    <li><a href="#">Travel <span>(5)</span></a></li>
+                                    <li><a href="#">Design <span>(22)</span></a></li>
+                                    <li><a href="#">Creative <span>(8)</span></a></li>
+                                    <li><a href="#">Educaion <span>(14)</span></a></li>
+                                </ul>
+                            </div><!-- End sidebar categories-->
+
+                            <h3 class="sidebar-title">Recent Posts</h3>
+                            <div class="sidebar-item recent-posts">
+                                {% for Edu in allEdu %}
+                                <div class="post-item clearfix">
+                                    <img src="{{Edu.image.url}}" alt="">
+                                    <h4><a href="/Education">{{Edu.title}}</a></h4>
+                                    <time datetime="2020-01-01">{{Edu.timeStamp}}</time>
+                                </div>
+                                {% endfor %}
+
+                            </div><!-- End sidebar recent posts-->
+
+                            <h3 class="sidebar-title">Tags</h3>
+                            <div class="sidebar-item tags">
+                                <ul>
+                                    <li><a href="#">App</a></li>
+                                    <li><a href="#">IT</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Mac</a></li>
+                                    <li><a href="#">Design</a></li>
+                                    <li><a href="#">Office</a></li>
+                                    <li><a href="#">Creative</a></li>
+                                    <li><a href="#">Studio</a></li>
+                                    <li><a href="#">Smart</a></li>
+                                    <li><a href="#">Tips</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                </ul>
+                            </div><!-- End sidebar tags-->
+
+                        </div><!-- End sidebar -->
+
+                    </div><!-- End blog sidebar -->
+
+                </div>
 
             </div>
-
-        </div>
 
     </section><!-- End Blog Single Section -->
 </main><!-- End #main -->

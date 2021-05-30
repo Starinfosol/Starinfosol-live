@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block title %}Education{% endblock title %}
+<!-- {% block blogactive %} active {% endblock blogactive %} -->
+
+{% block body %}
+{% load static %}
+
+
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Education</li>
+            </ol>
+            <h2>Updates</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+
+        <div class="container" data-aos="fade-up">
+            <!-- <h2>Articles by Starinfosol</h2> -->
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="{{Edu.image.url}}" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">{{Edu.title}}</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                                        href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">Article by {{Edu.author}}</a>
+                                </li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw"><time
+                                            datetime="2020-01-01">{{Edu.timeStamp}}</time></a></li>
+                                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">{{comments.count}}
+                                        Comments</a></li>
+                                <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                        href="/updates">{{post.slug}}</a></li> -->
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p class="card-text mb-auto">
+                                {{Edu.content|safe}}
+                                <!-- {{post.content| truncatechars:500}} -->
+                            </p>
+                            <!-- <div class="read-more">
+                                <a href="{{post.slug}}">Read More</a>
+                            </div> -->
+                        </div>
+
+
+
+                        <div class="entry-footer">
+                            <i class="bi bi-folder"></i>
+                            <ul class="cats">
+                                <li><a href="#">{{Edu.slug}}</a></li>
+                            </ul>
+
+                            <i class="bi bi-tags"></i>
+                            <ul class="tags">
+                                <li><a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">Creative</a></li>
+                                <li><a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">Tips</a></li>
+                                <li><a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">Marketing</a></li>
+                            </ul>
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar">
+
+                        <h3 class="sidebar-title">Search</h3>
+                        <div class="sidebar-item search-form">
+                            <form method="get" action="/search">
+                                <input type="text" placeholder="Results" aria-label="Search" name="query" id="query">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                            </form>
+                        </div><!-- End sidebar search formn-->
+
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="sidebar-item categories">
+                            <ul>
+                                <li><a href="#">General <span>(25)</span></a></li>
+                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                                <li><a href="#">Travel <span>(5)</span></a></li>
+                                <li><a href="#">Design <span>(22)</span></a></li>
+                                <li><a href="#">Creative <span>(8)</span></a></li>
+                                <li><a href="#">Educaion <span>(14)</span></a></li>
+                            </ul>
+                        </div><!-- End sidebar categories-->
+
+                        <h3 class="sidebar-title">Recent Posts</h3>
+                        <div class="sidebar-item recent-posts">
+
+                            <div class="post-item clearfix">
+                                <img src="{{Edu.image.url}}" alt="">
+                                <h4><a href="/updates">{{Edu.title}}</a></h4>
+                                <time datetime="2020-01-01">{{Edu.timeStamp}}</time>
+                            </div>
+
+
+                        </div><!-- End sidebar recent posts-->
+
+                        <h3 class="sidebar-title">Tags</h3>
+                        <div class="sidebar-item tags">
+                            <ul>
+                                <li><a href="#">App</a></li>
+                                <li><a href="#">IT</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Mac</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Creative</a></li>
+                                <li><a href="#">Studio</a></li>
+                                <li><a href="#">Smart</a></li>
+                                <li><a href="#">Tips</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+                        </div><!-- End sidebar tags-->
+
+                    </div><!-- End sidebar -->
+
+                </div><!-- End blog sidebar -->
+
+            </div>
+
+        </div>
+
+    </section><!-- End Blog Single Section -->
+</main><!-- End #main -->
+
+{% endblock body %}

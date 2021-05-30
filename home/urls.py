@@ -17,5 +17,7 @@ urlpatterns = [
     path("Terms_conditions", views.Terms_conditions, name='Terms_conditions'),
     path("Education", views.Education, name='Education'),
     path("Pricing", views.Pricing, name='Pricing'),
+    path('<str:slug>', views.Educationpost, name="Educationpost"),
+    path('Technical', views.Technical, name="Technical"),
     
     ]

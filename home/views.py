@@ -28,6 +28,25 @@ def Education(request):
 def Pricing(request):
     return render(request, 'Pricing.html')
 
+def Technical(request):
+    return render(request, 'Technical.html')
+
+def Educationpost(request, slug): 
+    post=Edu.objects.filter(slug=slug).first()
+    # comments= BlogComment.objects.filter(Edu=Edu, parent=None)
+    # replies= BlogComment.objects.filter(Edu=Edu).exclude(parent=None)
+    # replyDict={}
+    # for reply in replies:
+    #     if reply.parent.sno not in replyDict.keys():
+    #         replyDict[reply.parent.sno]=[reply]
+    #     else:
+    #         replyDict[reply.parent.sno].append(reply)
+
+    context={'Edu':post}
+    return render(request, "Educationpost.html", context)
+    
+
+
 ################################################################################
 
 def contact(request):
