@@ -14,6 +14,7 @@ class Appointment(models.Model):
     date= models.DateField(auto_now=False, auto_now_add=False, blank=True, null=True, default="")
     department= models.CharField(max_length=255)
     doctor=models.CharField(choices=TAGS, max_length=255, default="")
+    amount=models.IntegerField(default=0)
     information= models.TextField()
     timeStamp= models.DateTimeField(auto_now_add=True, blank=True)
     is_deleted = models.BooleanField(default=False)

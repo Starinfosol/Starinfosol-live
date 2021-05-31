@@ -18,7 +18,9 @@
   <link href="{% static 'assets/img/apple-touch-icon001.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -40,7 +42,8 @@
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
   <!-- googoleDsence -->
-  <script data-ad-client="ca-pub-2002299671964701" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-2002299671964701" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
@@ -71,7 +74,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center" style="
     padding-left: 2px;
-    padding-right: 2px;"> 
+    padding-right: 2px;">
 
       <a href="/" class="logo me-auto"><img src="{% static 'assets/img/stara.png' %}" alt=""></a>
 
@@ -153,7 +156,7 @@
 
   {% for message in messages %}
   <script>
-    window.onload = function(){
+    window.onload = function () {
       alert('{{ message }}')
     }
   </script>
@@ -224,7 +227,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/appointment" method='post'>
+          <form action="/appointment/appointment" method='post'>
             {% csrf_token %}
             <div class="row">
               <div class="row">
@@ -240,8 +243,8 @@
               </div>
               <div class="row">
                 <div class="col-md-4 form-group mt-3">
-                  <input type="datetime" name="date" class="form-control datepicker" id="date"
-                    placeholder="YYYY-MM-DD" required>
+                  <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="YYYY-MM-DD"
+                    required>
                 </div>
                 <div class="col-md-4 form-group mt-3">
                   <select name="department" id="department" class="form-select">
@@ -266,8 +269,16 @@
                   placeholder="Message (Optional)"></textarea>
               </div>
               {% csrf_token %}
-              <div class="text-center"><button id="appointment-form-button" class="btn btn-primary btn-sm"
-                  type="submit">Make an Appointment</button>
+              <!-- <div class="col-md-4 form-group mt-3">
+                <input type="amount" name="amount" class="form-control datepicker" id="amount"
+                  placeholder="Amount(Optional)">
+              </div> -->
+
+              <div class="text-center">
+                <!-- <button id="appointment-form-button" class="btn btn-primary btn-sm"
+                  type="submit">Make Payment</button> -->
+                <a class="text-right"><button id="appointment-form-button" class="btn btn-primary btn-sm"
+                  type="submit">Make an Appointment</button></a>
               </div>
             </div>
           </form>
@@ -369,11 +380,21 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Serving in</h4>
             <ul>
-              <li><c href="#">Jabalpur</c></li>
-              <li><c href="#">Chhindwara</c></li>
-              <li><c href="#">Ghazipur</c></li>
-              <li><c href="#">Bhopal</c></li>
-              <li><c href="#">Indore</c></li>
+              <li>
+                <c href="#">Jabalpur</c>
+              </li>
+              <li>
+                <c href="#">Chhindwara</c>
+              </li>
+              <li>
+                <c href="#">Ghazipur</c>
+              </li>
+              <li>
+                <c href="#">Bhopal</c>
+              </li>
+              <li>
+                <c href="#">Indore</c>
+              </li>
             </ul>
             <form action="#signupModal" method="post"> {% csrf_token %}
               <input type="email" name="email"><input type="submit" value="Subscribe">
@@ -426,6 +447,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
+  <!-- hide right key for mouse (code) -->
+  <script type="text/JavaScript">
+  document.addEventListener("contextmenu",function(Starinfosol){
+    Starinfosol.preventDefault();
+  });
+  </script>
 
 </body>
 

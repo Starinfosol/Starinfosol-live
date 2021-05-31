@@ -1,6 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from appointment.models import Appointment
-from home.models import Contact, Edu
+from home.models import Contact
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -17,32 +16,12 @@ def index(request):
 def Terms_conditions(request):
     return render(request, 'Terms_conditions.html')
 
-def Education(request):
-    allEdu = Edu.objects.all()
-    context = {'allEdu': allEdu}
-    return render(request, 'Education.html', context)
 
 def Pricing(request):
     return render(request, 'Pricing.html')
 
 def Technical(request):
     return render(request, 'Technical.html')
-
-def Educationpost(request, slug): 
-    post=Edu.objects.filter(slug=slug).first()
-    # comments= BlogComment.objects.filter(Edu=Edu, parent=None)
-    # replies= BlogComment.objects.filter(Edu=Edu).exclude(parent=None)
-    # replyDict={}
-    # for reply in replies:
-    #     if reply.parent.sno not in replyDict.keys():
-    #         replyDict[reply.parent.sno]=[reply]
-    #     else:
-    #         replyDict[reply.parent.sno].append(reply)
-
-    context={'Edu':post}
-    return render(request, "Educationpost.html", context)
-    
-
 
 ################################################################################
 
@@ -61,32 +40,6 @@ def contact(request):
                 request, "Your message has been successfully sent")
     return render(request, "index.html")
 
-################################################################################
-
-def Appointmentadd(request):
-    if request.method == "POST":
-        # Get the post parameters
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        date = request.POST['date']
-        department = request.POST['department']
-        doctor = request.POST['doctor']
-        information = request.POST['information']
-        if len(name) < 2 or len(email) < 3 or len(phone) < 10:
-            messages.error(request, "Please fill the form correctly")
-        else:
-            inc = Appointment(name=name, email=email, phone=phone, date=date, department=department, doctor=doctor, information=information)
-            inc.save()
-            # send_mail(
-            #     'Appointment',
-            #     '{{name}}',
-            #     'starinfosol954@gmail.com',
-            #     ['starinfosol954@gmail.com'],
-            #     fail_silently=False,
-            # )
-            messages.success(request, "Your Appointment has been booked successfully")
-    return render(request, "index.html")
 
 #################################################################################################
 

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'colorfield',
     'home.apps.HomeConfig',
     'appointment.apps.AppointmentConfig',
+    'Education.apps.EducationConfig',
     'blogs.apps.BlogsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

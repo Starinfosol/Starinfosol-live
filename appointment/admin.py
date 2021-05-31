@@ -4,7 +4,7 @@ from django.utils.html import format_html
 # Register your models here.
 
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone', 'date', 'department', 'doctor', 'information', 'is_deleted')
+    list_display = ('name', 'email', 'phone', 'date', 'department', 'doctor', 'amount', 'information', 'is_deleted')
     list_filter = ('doctor', 'is_deleted', 'created_at')
     list_per_page = 15
     search_fields = ['doctor', 'name', 'email', 'phone', 'date']
