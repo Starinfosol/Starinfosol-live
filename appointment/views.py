@@ -3,8 +3,8 @@ from appointment.models import Appointment
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth.models import User
-from math import ceil
-import json
+# from math import ceil
+# import json
 # from django.views.decorators.csrf import csrf_exempt
 # from PayTm import Checksum
 

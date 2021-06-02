@@ -23,6 +23,21 @@ def Pricing(request):
 def Technical(request):
     return render(request, 'Technical.html')
 
+def Management(request):
+    return render(request, 'Management.html')
+
+def Medicine(request):
+    return render(request, 'Medicine.html')
+
+def physiotherapy(request):
+    return render(request, 'physiotherapy.html')
+
+def pathology(request):
+    return render(request, 'pathology.html')
+
+def Doctors(request):
+    return render(request, 'Doctors.html')
+
 ################################################################################
 
 def contact(request):

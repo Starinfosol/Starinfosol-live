@@ -15,5 +15,10 @@ urlpatterns = [
     path("Terms_conditions", views.Terms_conditions, name='Terms_conditions'),
     path("Pricing", views.Pricing, name='Pricing'),
     path('Technical', views.Technical, name="Technical"),
+    path('Management', views.Management, name="Management"),
+    path('Medicine', views.Medicine, name="Medicine"),
+    path('physiotherapy', views.physiotherapy, name="physiotherapy"),
+    path('pathology', views.pathology, name="pathology"),
+    path('Doctors', views.Doctors, name="Doctors"),
     
     ]
