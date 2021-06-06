@@ -38,6 +38,9 @@ def pathology(request):
 def Doctors(request):
     return render(request, 'Doctors.html')
 
+def careers(request):
+    return render(request, 'careers.html')
+
 ################################################################################
 
 def contact(request):

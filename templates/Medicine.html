@@ -30,74 +30,376 @@
 
                 <div class="col-lg-8 entries">
 
-                    <!-- ########################################################################################### -->
+                    <!-- ############################################################################################-->
 
 
 
+                    <h1 class="heading">Homemade Remedies(घरेलू नुस्खे)</h1>
 
-
-                    <!-- ########################################################################################### -->
-
-
-                </div><!-- End blog entries list -->
-
-                <div class="col-lg-4">
-
-                    <div class="sidebar">
-
-                        <h3 class="sidebar-title">Search</h3>
-                        <div class="sidebar-item search-form">
-                            <form method="get" action="/search">
-                                <input type="text" placeholder="Results" aria-label="Search" name="query" id="query">
-                                <button type="submit"><i class="bi bi-search"></i></button>
-                            </form>
-                        </div><!-- End sidebar search formn-->
-
-                        <h3 class="sidebar-title">Categories</h3>
-                        <div class="sidebar-item categories">
-                            <ul>
-                                <li><a href="#">General <span>(25)</span></a></li>
-                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                                <li><a href="#">Travel <span>(5)</span></a></li>
-                                <li><a href="#">Design <span>(22)</span></a></li>
-                                <li><a href="#">Creative <span>(8)</span></a></li>
-                                <li><a href="#">Educaion <span>(14)</span></a></li>
-                            </ul>
-                        </div><!-- End sidebar categories-->
-
-                        <h3 class="sidebar-title">Recent Posts</h3>
-                        <div class="sidebar-item recent-posts">
-                            {% for post in allPosts %}
-                            <div class="post-item clearfix">
-                                <img src="{{post.image.url}}" alt="">
-                                <h4><a href="/updates">{{post.title}}</a></h4>
-                                <time datetime="2020-01-01">{{post.timeStamp}}</time>
+                    <br>
+                    <article class="blog-post">
+                        <h2 class="blog-post-title">Normal or viral fever(बुखार) </h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                                <img src="{% static 'assets/img/medicine/medicine-1.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            {% endfor %}
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                                <p>
+                                    <strong>Kadha</strong> is used from ancient times in India to cure fever. It is made
+                                    by boiling mixture of
+                                    tulsi, cinnamon, black pepper, cloves, turmeric, celery, black salt, ginger, honey
+                                    or jaggery and
+                                    lemongrass with milk. It is preffered best for
+                                    <strong>immunity</strong> boosting too. <br>
+                                    भारत में बुखार को ठीक करने के लिए <strong>काढ़ा</strong> का प्रयोग प्राचीन काल से
+                                    किया जाता रहा
+                                    है। इसे दूध में तुलसी, दालचीनी, काली मिर्च, अजवाइन, काला नमक, लौंग, हल्दी, अदरक, शहद
+                                    या गुड़ और लेमनग्रास के मिश्रण को उबालकर
+                                    बनाया जाता है। <strong>इम्युनिटी</strong> बढ़ाने के लिए भी इसे सबसे अच्छा माना जाता
+                                    है।
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                        <h2 class="blog-post-title">Immunity Boosting(रोग प्रतिरोधक क्षमता बढ़ाने के लिए) </h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                                <img src="{% static 'assets/img/medicine/medicine-2.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                                <p>
+                                    1. <strong>Kadha</strong> is used for <strong>immunity</strong> boosting. <br>
+                                    2. <strong>Yoga</strong> should be done daily. <br>
+                                    3. Eat <strong>green vegs</strong>. <br>
+                                    4. Drink hot water. <br>
+                                    <br>
+                                    1. काढ़ा का उपयोग रोग प्रतिरोधक क्षमता बढ़ाने के लिए किया जाता है। <br>
+                                    2. योग प्रतिदिन करना चाहिए। <br>
+                                    3. हरी सब्जियां खाएं। <br>
+                                    4. गर्म पानी पिएं। <br>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <h2 class="blog-post-title">Benefits of Aloe Vera(एलोविरा के लाभ)</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                                <img src="{% static 'assets/img/medicine/medicine-3.jfif' %}" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                                <p>
+                                    <strong>Aloe vera</strong> is a popular medicinal plant that people have used for
+                                    thousands of years.
+                                    It has
+                                    number of benefits. It has very important components present in it like
+                                    minerals, <strong>vitamins</strong> and <strong>antioxidants</strong> present in it.
+                                    It has antioxidant and
+                                    antibacterial properties
+                                    thus can be used for curing skin diseases. It increases the speed of wound healing.
+                                    It
+                                    helps keeping away the problems like gums of teeth and tooth decay when used as a
+                                    mouth fresher.
+                                    <!-- It also helps in curing canker scores in mouth by applying on them. It is used to
+                                    reduse
+                                    constipation. It is used to improve skin and lower blood sugar level. -->
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            It also helps in curing canker scores in mouth by applying on them. It is used to
+                            reduse
+                            constipation. It is used to improve skin and lower <strong>blood sugar level</strong>.
+                            <br>
+                            एलोवेरा एक लोकप्रिय औषधीय पौधा है जिसका उपयोग लोग हजारों वर्षों से करते आ रहे हैं।
+                            इसके कई फायदे हैं। इसमें मौजूद खनिज, विटामिन और एंटीऑक्सीडेंट जैसे बहुत ही महत्वपूर्ण
+                            घटक इसमें मौजूद होते हैं। इसमें एंटीऑक्सीडेंट और जीवाणुरोधी गुण होते हैं इसलिए इसका उपयोग
+                            त्वचा
+                            रोगों के इलाज के लिए किया जा सकता है। यह घाव भरने की गति को बढ़ाता है। यह माउथ फ्रेशर के
+                            रूप में उपयोग किए जाने पर दांतों के मसूड़ों और दांतों की सड़न जैसी समस्याओं को दूर रखने में
+                            मदद
+                            करता है। यह मुंह में नासूर के निशान को ठीक करने में भी मदद करता है। इसका उपयोग
+                            कब्ज को कम करने के लिए किया जाता है।
+                            इसका उपयोग त्वचा में सुधार और रक्त शर्करा के स्तर को कम करने के लिए किया जाता है।
+                        </p>
+                        <br>
+                        <hr>
+                        <h2 class="blog-post-title">Benefits of Neem(नीम के लाभ) </h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                                <img src="{% static 'assets/img/medicine/medicine-4.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                                <p>
+                                    Neem is a type of evergreen tree named <i><strong>Azadirachta indica</strong></i>.
+                                    In it, 130 types of different biological compounds are found.
+                                    It is used for curing of many diseases since 5000 years ago.
+                                    It is used for leprosy, eye disorders, bloody nose, intestinal worms,
+                                    stomach upset, loss of appetite, skin ulcers, diseases of the heart
+                                    and blood vessels, fever, diabetes, gum disease,
+                                    and liver problems. The leaf is also used for birth control and to cause abortions.
+                                    <br>
+                                </p>
 
-                        </div><!-- End sidebar recent posts-->
+                            </div>
+                        </div>
+                        <p>नीम एक प्रकार का सदाबहार वृक्ष है जिसका नाम <i><strong>Azadirachta indica</strong></i> है।
+                            इसमें 130 प्रकार के विभिन्न जैविक यौगिक पाए जाते हैं।
+                            इसका उपयोग 5000 साल पहले से कई बीमारियों के इलाज के लिए किया जाता है।
+                            इसका उपयोग कुष्ठ रोग, नेत्र विकार, नाक से खून आना, आंतों के कीड़े, के लिए किया जाता है।
+                            पेट खराब होना, भूख न लगना, त्वचा के छाले, हृदय के रोग
+                            और रक्त वाहिकाओं, बुखार, मधुमेह, मसूड़ों की बीमारी,
+                            और जिगर की समस्याएं। पत्ती का उपयोग जन्म नियंत्रण और गर्भपात के लिए भी किया जाता है।</p>
+                        <hr>
+                        <br>
+                    </article>
+                    <div class="blog-post">
+                        <h1 class="blog-post-title">MEDICAL PLANTS</h1>
+                        <p>Names of Ingrediants found in Medical Plants and their Uses.</p>
 
-                        <h3 class="sidebar-title">Tags</h3>
-                        <div class="sidebar-item tags">
-                            <ul>
-                                <li><a href="#">App</a></li>
-                                <li><a href="#">IT</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Mac</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Creative</a></li>
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">Smart</a></li>
-                                <li><a href="#">Tips</a></li>
-                                <li><a href="#">Marketing</a></li>
-                            </ul>
-                        </div><!-- End sidebar tags-->
+                        <article>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>S.No.</th>
+                                        <th>Medical Plants</th>
+                                        <th>Treatable Diseases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>Gurmar</td>
+                                        <td>Gastric troubles, diabetes, urinary complaints, stomach ache</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>Kalihari</td>
+                                        <td>Gout, stomach ache</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>Tulsi</td>
+                                        <td>Cough, coryza, fever</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>Neem</td>
+                                        <td>Blood purifier, insecticide</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>Tamala</td>
+                                        <td>Digestive, antibacterial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Kurchi</td>
+                                        <td>Hypertensive tumeric cancer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td>Safed moosli</td>
+                                        <td>Dry powdered roots are used as tonic, treatment of gouts and increasing
+                                            sexual potency</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.</td>
+                                        <td>Ulat kambal</td>
+                                        <td>Lowers cholestrol level in blood, urinary trouble, bronchitis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.</td>
+                                        <td>Rati or kunch</td>
+                                        <td>Inflammatory, Night blindness</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10.</td>
+                                        <td>Harkasa</td>
+                                        <td>Paralysis, rheumatism</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11.</td>
+                                        <td>Bish</td>
+                                        <td>Fever, Cholera, leprosy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.</td>
+                                        <td>Boch</td>
+                                        <td>Indigestion, epilepsy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13.</td>
+                                        <td>Bel or shriphal</td>
+                                        <td>Fever, dysentery</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14.</td>
+                                        <td>Lahsun</td>
+                                        <td>Cancer, diabetes, inflammatory, lowers cholesterol, good for health</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15.</td>
+                                        <td>Ghritkumari</td>
+                                        <td>Jaundice, fever, rheumatism, skin diseases</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.</td>
+                                        <td>Saptaparni</td>
+                                        <td>Leposy, chronic pain</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17.</td>
+                                        <td>Kaju</td>
+                                        <td>Cracks on soles of feet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18.</td>
+                                        <td>Kirata</td>
+                                        <td>Diabetes, worms of stomach</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19.</td>
+                                        <td>Supari</td>
+                                        <td>Tooth decay, antimicrobial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20.</td>
+                                        <td>Iswarmul</td>
+                                        <td>Fever, impotency, snake bite, cough</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.</td>
+                                        <td>Shatavari</td>
+                                        <td>Refrigerant, intestinal diseases, enhances breast milk</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22.</td>
+                                        <td>Bramhi</td>
+                                        <td>Strengthens body, improves quality of semen, increases memory, lifespan and
+                                            life sustaining</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23.</td>
+                                        <td>Hingan</td>
+                                        <td>Leucoderma, antitumor, antihelminitic</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24.</td>
+                                        <td>Palasha or dhak</td>
+                                        <td>Ascaris, Contraceptive, tuberculosis, diarrhoea</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25.</td>
+                                        <td>Kumbhi</td>
+                                        <td>Body pain, fever, cold and cough</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26.</td>
+                                        <td>Nayantara</td>
+                                        <td>Diabetes, cancer, fever, septic wounds, epilepsy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27.</td>
+                                        <td>Keyu</td>
+                                        <td>Anthelminitic, asthama, skin diseases, fever</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28.</td>
+                                        <td>Haldi</td>
+                                        <td>Headache, inflammation of eye, night blindness, fever, wound, laxative</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 29. </td>
+                                        <td> Dhatura </td>
+                                        <td> Skin diseases, anthelminitic, diarhhoea, fever, asthama </td>
+                                    </tr>
+                                    <tr>
+                                        <td>30. </td>
+                                        <td> Varahi </td>
+                                        <td>Madness, skin diseases</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 31. </td>
+                                        <td> Kulattha </td>
+                                        <td> Asthma, tumors, wounds, neumonia, kidney stone </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 32. </td>
+                                        <td> Bhringaraj </td>
+                                        <td> Gastric troubles, hepatic disorder, fever, cough, ulser, wounds, hair
+                                            growth, snake bite, malaria </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 33. </td>
+                                        <td> Chhoti ilaichi </td>
+                                        <td> Digestive, stimulant, asthma, cough, antimicrobial </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 34. </td>
+                                        <td> Baberang </td>
+                                        <td> Skin diseases, ringworms, leucoderma </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 35. </td>
+                                        <td> Amla </td>
+                                        <td> Fever, indigestion, cough, asthma, diabetes </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 36. </td>
+                                        <td> Common fig </td>
+                                        <td> Diabetes, dysentery, small pox </td>
+                                    </tr>
+                                </tbody>
 
-                    </div><!-- End sidebar -->
+                            </table>
 
-                </div><!-- End blog sidebar -->
+                            <!-- <p>This is some additional paragraph placeholder content. It's a slightly
+                        shorter
+                        version of the other highly repetitive body text used throughout.</p> -->
+                        </article>
+                    </div>
 
+
+
+                    <!-- ########################################################################################### -->
+                </div>
+                <!--End blog entries list -->
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <div class="p-4 mb-3 bg-light rounded">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                                <img src="{% static 'assets/img/technical/com.png' %}" alt="" class="img-fluid">
+                            </div>
+                            <h4 class="fst-italic">About</h4>
+                            <p class="mb-0">Homemade remedy is a simply prepared medication or tonic often of
+                                unproven effectiveness administered without prescription or professional supervision.
+                            </p>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="fst-italic">Types of Remedies</h4>
+                            <ol class="list-unstyled mb-0">
+                                <li><a>For fever</a></li>
+                                <li><a>For boosting immunity</a></li>
+                                <!-- <li><a>Tours & Travels</a></li>
+                                <li><a>Electricians</a></li>
+                                <li><a>Constructions</a></li>
+                                <li><a>Agriculture</a></li>
+                                <li><a>Photoshoot</a></li>
+                                <li><a>Event Management</a></li>
+                                <li><a>Hotel and Rental Services</a></li> -->
+                            </ol>
+                        </div>
+                        <h4 class="fst-italic">Donate Now</h4>
+                        <img src="{% static 'assets/img/Payment.png' %}" alt="" class="img-fluid">
+                    </div>
+                </div>
             </div>
 
         </div>

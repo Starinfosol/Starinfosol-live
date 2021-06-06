@@ -7,6 +7,7 @@ from home import views
 
 urlpatterns = [
     path("", views.index, name='index'),
+    path("index.html", views.index, name='index'),
     path('contact', views.contact, name="contact"),
     path('search', views.search, name="search"),
     path('signup', views.handleSignUp, name="handleSignUp"),
@@ -20,5 +21,6 @@ urlpatterns = [
     path('physiotherapy', views.physiotherapy, name="physiotherapy"),
     path('pathology', views.pathology, name="pathology"),
     path('Doctors', views.Doctors, name="Doctors"),
+    path('careers', views.careers, name="careers"),
     
     ]
