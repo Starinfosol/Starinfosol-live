@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 
 
+
 def Educationhome(request):
     allEducation = Education.objects.all()
     context = {'allEducation': allEducation}

@@ -22,5 +22,6 @@ urlpatterns = [
     path('pathology', views.pathology, name="pathology"),
     path('Doctors', views.Doctors, name="Doctors"),
     path('careers', views.careers, name="careers"),
+    path('career_field', views.careersadd, name="careersadd"),
     
     ]

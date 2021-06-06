@@ -1,10 +1,12 @@
 from django.shortcuts import render, HttpResponse, redirect
 from home.models import Contact
+from Education.models import Careers, Recruitment
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse_lazy
+from django.core.files.storage import FileSystemStorage
 
 
 ###############################################################################
@@ -39,7 +41,9 @@ def Doctors(request):
     return render(request, 'Doctors.html')
 
 def careers(request):
-    return render(request, 'careers.html')
+    allcareers = Careers.objects.all()
+    context = {'allcareers': allcareers}
+    return render(request, 'careers.html', context)
 
 ################################################################################
 
@@ -58,6 +62,29 @@ def contact(request):
                 request, "Your message has been successfully sent")
     return render(request, "index.html")
 
+################################################################################
+
+def careersadd(request):
+    if request.method == "POST":
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        code = request.POST['code']
+        lcompany = request.POST['lcompany']
+        city = request.POST['city']
+        state = request.POST['state']
+        experience = request.POST['exp']
+        upload_file = request.POST['file']
+        content = request.POST['information']
+        if len(fname) < 2 or len(email) < 3 or len(phone) < 10 or len(content) < 4:
+            messages.error(request, "Please fill the form correctly")
+        else:
+            profile = Recruitment(fname=fname, lname=lname, email=email, phone=phone, code=code, lcompany=lcompany, city=city, state=state, experience=experience, upload_file=upload_file, content=content)
+            profile.save()
+            messages.success(
+                request, "Your Application has been successfully Submitted")
+    return render(request, "careers.html")
 
 #################################################################################################
 
@@ -115,7 +142,7 @@ def handleSignUp(request):
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
-        messages.success(request, " Your iCoder has been successfully created")
+        messages.success(request, " Your Starinfosol Account has been successfully created")
         return redirect('index')
 
     else:

@@ -5,6 +5,7 @@
 
 {% block body %}
 {% load static %}
+{% load embed_video_tags %}
 
 
 
@@ -38,6 +39,8 @@
                         <div class="entry-img">
                             <img src="{{Education.image.url}}" alt="" class="img-fluid">
                         </div>
+
+                        {% video Education.video '680x400' %}
 
                         <h2 class="entry-title">
                             <a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">{{Education.title}}</a>
@@ -116,10 +119,10 @@
 
                             <div class="post-item clearfix">
                                 <img src="{{Education.image.url}}" alt="">
+                                {% video Education.video '100% x 50%' %}
                                 <h4><a href="/updates">{{Education.title}}</a></h4>
                                 <time datetime="2020-01-01">{{Education.timeStamp}}</time>
                             </div>
-
 
                         </div><!-- End sidebar recent posts-->
 

@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'ckeditor',
     # 'django_cleanup',
     'django.contrib.humanize',
+    'embed_video',
     
 ]
 

@@ -10,4 +10,5 @@ from Education import views
 urlpatterns = [
     path('', views.Educationhome, name='Educationhome'),
     path('<str:slug>', views.Educationpost, name="Educationpost"),
+
 ]

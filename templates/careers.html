@@ -7,7 +7,7 @@
 
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
             <ol>
@@ -17,7 +17,89 @@
             <h2>Updates</h2>
 
         </div>
-    </section><!-- End Breadcrumbs -->
+    </section>End Breadcrumbs -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+ <!-- careers Section -->
+ <div class="modal fade" id="careersModal" tabindex="-2" aria-labelledby="careersModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careersModalTitle">Application</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/career_field" method='post'>
+            {% csrf_token %}
+            <div class="row">
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name"
+                    required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name"
+                    required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+                </div>
+              </div>
+             
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                    <input type="code" class="form-control" id="code" name="code" placeholder="Postal/Zip Code" required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                    <input type="location" class="form-control" name="lcompany" id="lcompany" placeholder="Current company/Last Organisation" required>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                    <input type="city" class="form-control" id="city" name="city" placeholder="Current city" required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                    <input type="state" class="form-control" name="state" id="state" placeholder="Current state" required>
+                </div>
+              </div>
+             
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                    <input type="exp" class="form-control" id="exp" name="exp" placeholder="Total Experience" required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                    <input type="file" class="" name="file" id="file" placeholder="CV">
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="information" id="information" rows="5"
+                  placeholder="Message (Optional)"></textarea>
+              </div>
+              {% csrf_token %}
+              <div class="text-center">
+                <a class="text-right"><button id="careers-form-button" class="btn btn-primary btn-sm"
+                  type="submit">Submit</button></a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <!-- ======= Blog Single Section ======= -->
@@ -26,80 +108,63 @@
         <div class="container" data-aos="fade-up">
             <!-- <h2>Articles by Starinfosol</h2> -->
 
-            <div class="row">
-
-                <div class="col-lg-8 entries">
-
-                    <!-- ########################################################################################### -->
+            <!-- ########################################################################################### -->
 
 
 
 
-                    <!-- ########################################################################################### -->
 
+            <!-- ======= Frequently Asked Questioins Section ======= -->
+            <section id="faq" class="faq section-bg">
+                <div class="container" data-aos="fade-up">
 
-                </div><!-- End blog entries list -->
+                    <div class="section-title">
+                        <h2>Overview</h2>
+                        <br>
+                        <p>
+                            Welcome to Starinfosol, do you need a job, we are providing you a
+                            platform where you can join us and take a training of some of the
+                            various services we provide and join us to create a better future
+                            for you. If you want to learn your new work and change your life
+                            then come join us in our training program with a small amount
+                            and after training, we will prepare you for services in our
+                            company and make your life a Will provide the path.
+                        
+                        </p>
+                        <!-- <h4 style="color: rgb(12, 2, 151);" href="#">Apply</h4> -->
+                    </div>
+                    <hr>
+                    <br>
+                    <br>
 
-                <div class="col-lg-4">
-
-                    <div class="sidebar">
-
-                        <h3 class="sidebar-title">Search</h3>
-                        <div class="sidebar-item search-form">
-                            <form method="get" action="/search">
-                                <input type="text" placeholder="Results" aria-label="Search" name="query" id="query">
-                                <button type="submit"><i class="bi bi-search"></i></button>
-                            </form>
-                        </div><!-- End sidebar search formn-->
-
-                        <h3 class="sidebar-title">Categories</h3>
-                        <div class="sidebar-item categories">
-                            <ul>
-                                <li><a href="#">General <span>(25)</span></a></li>
-                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                                <li><a href="#">Travel <span>(5)</span></a></li>
-                                <li><a href="#">Design <span>(22)</span></a></li>
-                                <li><a href="#">Creative <span>(8)</span></a></li>
-                                <li><a href="#">Educaion <span>(14)</span></a></li>
-                            </ul>
-                        </div><!-- End sidebar categories-->
-
-                        <h3 class="sidebar-title">Recent Posts</h3>
-                        <div class="sidebar-item recent-posts">
-                            {% for post in allPosts %}
-                            <div class="post-item clearfix">
-                                <img src="{{post.image.url}}" alt="">
-                                <h4><a href="/updates">{{post.title}}</a></h4>
-                                <time datetime="2020-01-01">{{post.timeStamp}}</time>
+                    <div class="section-title">
+                        <h2>CURRENT OPENINGS</h2>
+                        <!-- <p>The letters FAQ stands for Frequently Asked Questions. A FAQ page is usually a list of common
+                            questions people have asked about a specific product or service.</p> -->
+                    </div>
+                    {% for Careers in allcareers %}
+                    <ul class="faq-list"> 
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">{{Careers.title}}<i
+                                    class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
                             </div>
-                            {% endfor %}
+                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    <strong>Skill: </strong>{{Careers.skill}}<br>
+                                    <strong>Experience: </strong>{{Careers.experience}}<br>
+                                    <strong>Job Description: </strong>{{Careers.content|safe}}<br>
+                                </p>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" href="#careersModal"><span
+                                  class="d-none d-md-inline">Apply</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </section><!-- End Frequently Asked Questioins Section -->
 
-                        </div><!-- End sidebar recent posts-->
 
-                        <h3 class="sidebar-title">Tags</h3>
-                        <div class="sidebar-item tags">
-                            <ul>
-                                <li><a href="#">App</a></li>
-                                <li><a href="#">IT</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Mac</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Office</a></li>
-                                <li><a href="#">Creative</a></li>
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">Smart</a></li>
-                                <li><a href="#">Tips</a></li>
-                                <li><a href="#">Marketing</a></li>
-                            </ul>
-                            <h3 class="sidebar-title">Donate Now</h3>
-                            <img src="{% static 'assets/img/Payment.png' %}" alt="" class="img-fluid">
-                        </div><!-- End sidebar tags-->
-
-                    </div><!-- End sidebar -->
-
-                </div><!-- End blog sidebar -->
-
-            </div>
+            <!-- ########################################################################################### -->
 
         </div>
 

@@ -4,6 +4,7 @@
 
 {% block body %}
 {% load static %}
+{% load embed_video_tags %}
 
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
@@ -31,12 +32,15 @@
                 <div class="col-lg-8 entries">
 
                     {% for Education in allEducation %}
+                    
 
                     <article class="entry">
 
                         <div class="entry-img">
                             <img src="{{Education.image.url}}" alt="" class="img-fluid">
                         </div>
+
+                            {% video Education.video '680x400' %}
 
                         <h2 class="entry-title">
                             <a href="{{Education.slug}}">{{Education.title}}</a>
@@ -60,7 +64,7 @@
 
                         <div class="entry-content">
                             <p class="card-text mb-auto">
-                                {{Education.content|safe|truncatechars:500}}
+                                {{Education.content|safe|truncatechars:200}}
                                 <!-- {{post.content| truncatechars:500}} -->
                             </p>
                             <div class="read-more">
@@ -169,6 +173,7 @@
                             {% for Education in allEducation %}
                             <div class="post-item clearfix">
                                 <img src="{{Education.image.url}}" alt="">
+                                {% video Education.video '100% x 50%' %}
                                 <h4><a href="{{Education.slug}}">{{Education.title}}</a></h4>
                                 <time datetime="2020-01-01">{{Education.timeStamp}}</time>
                             </div>
