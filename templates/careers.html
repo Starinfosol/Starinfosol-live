@@ -4,10 +4,13 @@
 
 {% block body %}
 {% load static %}
+<div id="preloader_p">
+  <div id="status">&nbsp;</div>
+</div>
 
 <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- <section id="breadcrumbs" class="breadcrumbs">
+  <!-- ======= Breadcrumbs ======= -->
+  <!-- <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
             <ol>
@@ -18,13 +21,13 @@
 
         </div>
     </section>End Breadcrumbs -->
-    <br>
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
- <!-- careers Section -->
- <div class="modal fade" id="careersModal" tabindex="-2" aria-labelledby="careersModal" aria-hidden="true">
+  <!-- careers Section -->
+  <div class="modal fade" id="careersModal" tabindex="-2" aria-labelledby="careersModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -39,47 +42,49 @@
             <div class="row">
               <div class="row">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name"
+                  <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name"
                     required>
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name"
+                  <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name"
                     required>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                    required>
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
-                </div>
-              </div>
-             
-              <div class="row">
-                <div class="col-md-6 form-group mt-3">
-                    <input type="code" class="form-control" id="code" name="code" placeholder="Postal/Zip Code" required>
-                </div>
-                <div class="col-md-6 form-group mt-3">
-                    <input type="location" class="form-control" name="lcompany" id="lcompany" placeholder="Current company/Last Organisation" required>
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
                 </div>
               </div>
-              
+
               <div class="row">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="city" class="form-control" id="city" name="city" placeholder="Current city" required>
+                  <input type="code" class="form-control" id="code" name="code" placeholder="Postal/Zip Code" required>
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="state" class="form-control" name="state" id="state" placeholder="Current state" required>
+                  <input type="location" class="form-control" name="lcompany" id="lcompany"
+                    placeholder="Current company/Last Organisation" required>
                 </div>
               </div>
-             
+
               <div class="row">
                 <div class="col-md-6 form-group mt-3">
-                    <input type="exp" class="form-control" id="exp" name="exp" placeholder="Total Experience" required>
+                  <input type="city" class="form-control" id="city" name="city" placeholder="Current city" required>
                 </div>
                 <div class="col-md-6 form-group mt-3">
-                    <input type="file" class="" name="file" id="file" placeholder="CV">
+                  <input type="state" class="form-control" name="state" id="state" placeholder="Current state" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                  <input type="exp" class="form-control" id="exp" name="exp" placeholder="Total Experience" required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                  <input type="file" class="" name="file" id="file" placeholder="CV">
                 </div>
               </div>
 
@@ -90,7 +95,7 @@
               {% csrf_token %}
               <div class="text-center">
                 <a class="text-right"><button id="careers-form-button" class="btn btn-primary btn-sm"
-                  type="submit">Submit</button></a>
+                    type="submit">Submit</button></a>
               </div>
             </div>
           </form>
@@ -100,75 +105,102 @@
       </div>
     </div>
   </div>
+  <!-- ########################################### -->
 
 
-    <!-- ======= Blog Single Section ======= -->
-    <section id="blog" class="blog">
 
+  <!-- style="display: none;" -->
+  <div id="popUpMain" style="display: none;">
+    <div id="popup">
+      <h1 id="carrierLogo"><strong>Starinfosol</strong></h1>
+      <!-- <input list="District" name="" id="cityName" placeholder="Select city"> <br> -->
+      <select id="cityName">
+        <option value="">Select District</option>
+        <option value="Jabalpur">Jabalpur</option>
+        <option value="Chhindwara">Chhindwara</option>
+        <option value="Indore">Indore</option>
+        <option value="Bhopal">Bhopal</option>
+        <option value="Ghazipur">Ghazipur</option>
+      </select> <br> <br>
+      <button class="submitId"> Submit</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- ======= Blog Single Section ======= -->
+  <section id="blog" class="blog">
+
+    <div class="container" data-aos="fade-up">
+      <!-- <h2>Articles by Starinfosol</h2> -->
+
+      <!-- ########################################################################################### -->
+
+
+
+
+
+      <!-- ======= Frequently Asked Questioins Section ======= -->
+      <section id="faq" class="faq section-bg">
         <div class="container" data-aos="fade-up">
-            <!-- <h2>Articles by Starinfosol</h2> -->
 
-            <!-- ########################################################################################### -->
+          <div class="section-title">
+            <h2>Overview</h2>
+            <br>
+            <p>
+              Welcome to Starinfosol, do you need a job, we are providing you a
+              platform where you can join us and take a training of some of the
+              various services we provide and join us to create a better future
+              for you. If you want to learn your new work and change your life
+              then come join us in our training program with a small amount
+              and after training, we will prepare you for services in our
+              company and make your life a Will provide the path.
 
+            </p>
+            <!-- <h4 style="color: rgb(12, 2, 151);" href="#">Apply</h4> -->
+          </div>
+          <hr>
+          <br>
+          <br>
 
-
-
-
-            <!-- ======= Frequently Asked Questioins Section ======= -->
-            <section id="faq" class="faq section-bg">
-                <div class="container" data-aos="fade-up">
-
-                    <div class="section-title">
-                        <h2>Overview</h2>
-                        <br>
-                        <p>
-                            Welcome to Starinfosol, do you need a job, we are providing you a
-                            platform where you can join us and take a training of some of the
-                            various services we provide and join us to create a better future
-                            for you. If you want to learn your new work and change your life
-                            then come join us in our training program with a small amount
-                            and after training, we will prepare you for services in our
-                            company and make your life a Will provide the path.
-                        
-                        </p>
-                        <!-- <h4 style="color: rgb(12, 2, 151);" href="#">Apply</h4> -->
-                    </div>
-                    <hr>
-                    <br>
-                    <br>
-
-                    <div class="section-title">
-                        <h2>CURRENT OPENINGS</h2>
-                        <!-- <p>The letters FAQ stands for Frequently Asked Questions. A FAQ page is usually a list of common
+          <div class="section-title">
+            <h2>CURRENT OPENINGS</h2>
+            <!-- <p>The letters FAQ stands for Frequently Asked Questions. A FAQ page is usually a list of common
                             questions people have asked about a specific product or service.</p> -->
-                    </div>
-                    {% for Careers in allcareers %}
-                    <ul class="faq-list"> 
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">{{Careers.title}}<i
-                                    class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
-                            </div>
-                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    <strong>Skill: </strong>{{Careers.skill}}<br>
-                                    <strong>Experience: </strong>{{Careers.experience}}<br>
-                                    <strong>Job Description: </strong>{{Careers.content|safe}}<br>
-                                </p>
-                                <a href="#careersModal" type="button" data-toggle="modal" class="appointment-btn scrollto"><span
-                                  class="d-none d-md-inline"></span>Apply</a>
-                            </div>
-                        </li>
-                    </ul>
-                    {% endfor %}
-                </div>
-            </section><!-- End Frequently Asked Questioins Section -->
-
-
-            <!-- ########################################################################################### -->
-
+          </div>
+          {% for Careers in allcareers %}
+          <ul class="faq-list">
+            <li>
+              <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">{{Careers.title}}<i
+                  class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  <strong>Skill: </strong>{{Careers.skill}}<br>
+                  <strong>Experience: </strong>{{Careers.experience}}<br>
+                  <strong>Job Description: </strong>{{Careers.content|safe}}<br>
+                </p>
+                <a href="#careersModal" type="button" data-toggle="modal" class="appointment-btn scrollto"><span
+                    class="d-none d-md-inline"></span>Apply</a>
+              </div>
+            </li>
+          </ul>
+          {% endfor %}
         </div>
+      </section><!-- End Frequently Asked Questioins Section -->
 
-    </section><!-- End Blog Single Section -->
+
+      <!-- ########################################################################################### -->
+
+    </div>
+
+  </section><!-- End Blog Single Section -->
+
 </main><!-- End #main -->
+
 
 {% endblock body %}

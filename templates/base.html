@@ -5,13 +5,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-  <!-- <title>Home | Starinfosol</title> -->
   <title> {% block title %}{% endblock title %} | Starinfosol</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="{% static 'assets/img/favicon001.png' %}" rel="icon">
@@ -20,28 +16,29 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
   <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- popup image -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"
+    integrity="sha512-nIm/JGUwrzblLex/meoxJSPdAKQOe2bLhnrZ81g5Jbh519z8GFJIWu87WAhBH+RAyGbM4+U3S2h+kL5JoV6/wA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_css/style_manual.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_css/style_main.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_css/style_source.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/my_css/style.css' %}" rel="stylesheet">
 
   <!-- googoleDsence -->
-  <script data-ad-client="ca-pub-2002299671964701" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-2002299671964701" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
@@ -51,8 +48,8 @@
   <div id="topbar" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center me-auto bi-arrow-up-short">
-          <a href="info@starinfosol.com">info@starinfosol.com</a></i>
+        <i class="bi bi-envelope">
+          <a href="#">info@starinfosol.com</a></i>
         <i class="bi bi-clock"></i> Time : 8AM to 10PM
         <!-- <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9074919296</span></i> -->
       </div>
@@ -76,6 +73,7 @@
 
       <a href="/" class="logo me-auto"><img src="{% static 'assets/img/stara.png' %}" alt=""></a>
 
+
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="#hero">Home</a></li>
@@ -91,11 +89,11 @@
               <li><a href="#faq">FAQ</a></li>
             </ul>
           </li>
-          
+
           <li class="dropdown"><a href="#"><span>Technology</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/Technical">Technical</a></li>
-              <li><a href="/Management">Management</a></li>
+              <li><a href="/Management">Business Management</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Health</span> <i class="bi bi-chevron-down"></i></a>
@@ -106,8 +104,8 @@
               <li><a href="/pathology">pathology</a></li>
             </ul>
           </li>
-          
-          
+
+
           <li><a href="/Education">Education</a></li>
           <li><a href="/blogs">Blogs</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -142,18 +140,6 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- Alerts messages -->
-
-  <!-- {% for message in messages %}
-  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-    <strong>Message : </strong> {{ message }}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  {% endfor %} -->
-
-
   {% for message in messages %}
   <script>
     window.onload = function () {
@@ -161,7 +147,6 @@
     }
   </script>
   {% endfor %}
-
 
   <!-- SignUp Modal -->
   <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
@@ -207,7 +192,7 @@
             </div>
 
             {% csrf_token %}
-            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+            <button type="submit" class="appointment-btn">Submit</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -277,8 +262,8 @@
               <div class="text-center">
                 <!-- <button id="appointment-form-button" class="btn btn-primary btn-sm"
                   type="submit">Make Payment</button> -->
-                <a class="text-right"><button id="appointment-form-button" class="btn btn-primary btn-sm"
-                  type="submit">Make an Appointment</button></a>
+                <a class="text-right"><button id="appointment-form-button" class="appointment-btn"
+                    type="submit">Make an Appointment</button></a>
               </div>
             </div>
           </form>
@@ -313,7 +298,7 @@
                 placeholder="Enter your password " required>
             </div>
             {% csrf_token %}
-            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+            <button type="submit" class="appointment-btn">Submit</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -322,14 +307,14 @@
     </div>
   </div>
 
-
   <!-- ################################################### -->
-
 
   {% block body %} {% endblock body %}
 
+  <!-- ################################################### -->
+
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer_s">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -345,8 +330,6 @@
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-                <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
                 <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
                 <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 <a href="https://wa.me/message/H72CPSV3OZMAE1" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
@@ -373,7 +356,6 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Project</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="/admin">Admin Panel</a></li>
-              <!-- <a href="/admin" role="button" target="_blank" class="btn btn-outline-success m-2 my-sm-0"> Admin Panel </a> -->
             </ul>
           </div>
 
@@ -400,7 +382,6 @@
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
             <br>
-            <!-- <a href="/logout" type="button" data-toggle="modal" class="m-0 appointment-btn scrollto"><span class="d-none d-md-inline"></span>Logout</a> -->
           </div>
         </div>
       </div>
@@ -411,33 +392,29 @@
         &copy; 2021 <strong><span>Starinfosol</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ -->
         Designed by <a href="https://starinfosol-live.herokuapp.com/">Shubham Verma</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- =======End Footer======= -->
 
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>->
+  <script src="{% static 'assets/my_vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/my_vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/my_vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/my_vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/my_vendor/swiper/swiper-bundle.min.js' %}"></script>
+
 
   <!-- Template Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="{% static 'assets/my_js/main.js' %}"></script>
+  <script src="{% static 'assets/my_js/main_m.js' %}"></script>
 
   <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -448,12 +425,64 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
 
-  <!-- hide right key for mouse (code) -->
-  <script type="text/JavaScript">
-  document.addEventListener("contextmenu",function(Starinfosol){
-    Starinfosol.preventDefault();
-  });
+  <!-- poopup image -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"
+    integrity="sha512-+m6t3R87+6LdtYiCzRhC5+E0l4VQ9qIT1H9+t1wmHkMJvvUQNI5MKKb7b08WL4Kgp9K0IBgHDSLCRJk05cFUYg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- //  hide right key for mouse (code) -->
+  <script>
+
+    type = "text/JavaScript" >
+      document.addEventListener("contextmenu", function (Starinfosol) {
+        Starinfosol.preventDefault();
+      });
+
   </script>
+
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        $('#popUpMain').css('display', 'block');
+      }, 5000);
+    });
+
+    $('.submitId').click(function () {
+      $('#popUpMain').css('display', 'none');
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () { // the containers for all your galleries
+      $('.gallerys').magnificPopup({
+        // delegate: 'a', // the selector for gallery item
+        // type: 'image',
+        // gallery: {
+        //   enabled:true
+        // }
+      });
+    });
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $(window).on('load', function () { // makes sure the whole site is loaded 
+      $('#status').fadeOut(); // will first fade out the loading animation 
+      $('#preloader_p').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+      $('body').delay(350).css({ 'overflow': 'visible' });
+    })
+  </script>
+
+
+  <!-- tsParticles container -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.28.0/dist/tsparticles.min.js"></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/custom-elements-es5-adapter.js"></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/webcomponents-loader.js"></script>
+  <script type="module"
+      src="https://cdn.jsdelivr.net/npm/web-particles@1.1.0/dist/web-particles.min.js"></script>
+  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 
 </body>
 

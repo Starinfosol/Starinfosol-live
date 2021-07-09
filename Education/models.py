@@ -16,7 +16,7 @@ class Education(models.Model):
     sno=models.AutoField(primary_key=True)
     title=models.CharField(max_length=255)
     video = EmbedVideoField(default='')  # same like models.URLField()
-    # image = CloudinaryField('image', default="")
+    image = CloudinaryField('image', default="")
    #  image=models.ImageField(upload_to= "images", default="blog.jpg", null=True, blank=True)
     author=models.CharField(max_length=14)
     tags=models.CharField(choices=TAGS, max_length=100, default='Technology')
@@ -54,6 +54,8 @@ class Recruitment(models.Model):
     upload_file=models.FileField(upload_to='')
     content=RichTextField()
     created_at = models.DateField(auto_now_add=True, blank=True, null=True)
+
+
 
 
 

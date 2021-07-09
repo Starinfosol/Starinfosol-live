@@ -8,7 +8,9 @@
 {% load embed_video_tags %}
 
 
-
+<div id="preloader_p">
+    <div id="status">&nbsp;</div>
+</div>
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
@@ -36,11 +38,11 @@
 
                     <article class="entry">
 
-                        <div class="entry-img">
+                        <!-- <div class="entry-img">
                             <img src="{{Education.image.url}}" alt="" class="img-fluid">
-                        </div>
+                        </div> -->
 
-                        {% video Education.video '680x400' %}
+                        {% video Education.video '420x260' %}
 
                         <h2 class="entry-title">
                             <a href="https://youtube.com/channel/UCnPwXpYNvOp9zS5kumJUSzw">{{Education.title}}</a>
@@ -119,7 +121,7 @@
 
                             <div class="post-item clearfix">
                                 <img src="{{Education.image.url}}" alt="">
-                                {% video Education.video '100% x 50%' %}
+                                <!-- {% video Education.video '100% x 50%' %} -->
                                 <h4><a href="/updates">{{Education.title}}</a></h4>
                                 <time datetime="2020-01-01">{{Education.timeStamp}}</time>
                             </div>

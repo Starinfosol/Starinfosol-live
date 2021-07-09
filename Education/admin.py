@@ -49,6 +49,8 @@ class RecruitmentAdmin(admin.ModelAdmin):
                 # return format_html(f'<span style="color:green">{obj.content[:100]}</span>')
 
 
+
+
 admin.site.register(Education, EducationAdmin)
 admin.site.register(Careers, CareersAdmin)
 admin.site.register(Recruitment, RecruitmentAdmin)

@@ -23,5 +23,6 @@ urlpatterns = [
     path('Doctors', views.Doctors, name="Doctors"),
     path('careers', views.careers, name="careers"),
     path('career_field', views.careersadd, name="careersadd"),
+    # path('popup', views.popup, name="popup"),
     
     ]

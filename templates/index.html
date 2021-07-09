@@ -6,6 +6,13 @@
 
 {% load static %}
 
+<!-- <div id="preloader"></div> -->
+
+<!-- <div id="preloader">
+  <div id="welcomeLogo"><strong>Starinfosol</strong></div>
+</div> -->
+<div id="preloader"></div>
+
 <!-- ======= Hero Section ======= -->
 <section id="hero">
   <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -15,16 +22,16 @@
     <div class="carousel-inner" role="listbox">
 
       <!-- Slide 1 -->
-      <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-001.jpg' %});">
+      <div class="carousel-item active" style="background-image: url(/static/assets/img/slide/slide-001.jpg);">
         <div class="container">
-          <h2>Welcome to <span>Starinfosol</span></h2>
+          <h2>Welcome to Starinfosol</h2>
           <p>Fastest And Most Efficient Work</p>
           <a href="#about" class="btn-get-started scrollto">Read More</a>
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-123.jpg' %});">
+      <div class="carousel-item" style="background-image: url(/static/assets/img/slide/slide-123.jpg);">
         <div class="container">
           <h2>Learn & Explore</h2>
           <p>To improve your strength and grow up your personality.</p>
@@ -33,7 +40,7 @@
       </div>
 
       <!-- Slide 3 -->
-      <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-003.jpg' %});">
+      <div class="carousel-item" style="background-image: url(/static/assets/img/slide/slide-003.jpg);">
         <div class="container">
           <h2>Complete your Dreams</h2>
           <p>Get all your essential services in one place.</p>
@@ -55,6 +62,10 @@
 </section><!-- End Hero -->
 
 <main id="main">
+  <br>
+  <br>
+  <br>
+  <br>
   <!-- ======= Featured Services Section ======= -->
   <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">
@@ -81,7 +92,8 @@
           <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="fas fa-book"></i></div>
             <h4 class="title"><a href="/Education">Education</a></h4>
-            <p class="description">For your best opportunity so improve your knowledge and skills and gain experience.</p>
+            <p class="description">For your best opportunity so improve your knowledge and skills and gain experience.
+            </p>
           </div>
         </div>
 
@@ -89,7 +101,8 @@
           <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="fas fa-dna"></i></div>
             <h4 class="title"><a href="/blogs">Covid-19</a></h4>
-            <p class="description">Stay home if you feel unwell. Safe and effective vaccines are a game-changing tool.</p>
+            <p class="description">Stay home if you feel unwell. Safe and effective vaccines are a game-changing tool.
+            </p>
           </div>
         </div>
 
@@ -118,8 +131,9 @@
 
       <div class="section-title">
         <h2>About Us</h2>
-        <p><strong>Starinfosol</strong> is an organisation that provides service packages which are made especially for your convenience.<br> 
-           Choose from a variety of service packages and enjoy host of extra benefits.</p>
+        <p><strong>Starinfosol</strong> is an organisation that provides service packages which are made especially for
+          your convenience.<br>
+          Choose from a variety of service packages and enjoy host of extra benefits.</p>
       </div>
 
       <div class="row">
@@ -147,9 +161,11 @@
           </ul>
           <p>
             If you are experienced in any service and you need some medium to give your service, then you can join us
-            and we'll provide you platform to give your service, now you do not need any shop to serve you nor do you need to wander here and there.
+            and we'll provide you platform to give your service, now you do not need any shop to serve you nor do you
+            need to wander here and there.
             We give you a platform where you can make more money by using your art and experience in the best way, we
-            provide you service in your own area through us. If you want to join us then join now...<p href="#signupModal" type="button" data-toggle="modal"  style="color:blue;">SignUp</p>
+            provide you service in your own area through us. If you want to join us then join now...
+          <p href="#signupModal" type="button" data-toggle="modal" style="color:blue;">SignUp</p>
           </p>
         </div>
       </div>
@@ -245,7 +261,7 @@
             <i class="bx bx-book"></i>
             <h4>Education</h4>
             <p>Our team shares information about our own career path,
-               as well as provide guidance, motivation, emotional support, and role modeling.</p>
+              as well as provide guidance, motivation, emotional support, and role modeling.</p>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
@@ -262,7 +278,8 @@
 
       <div class="section-title">
         <h2>Services</h2>
-        <p>Starinfosol company provides a platform that allows skills and experienced professionals to connect with users looking for specific services.</p>
+        <p>Starinfosol company provides a platform that allows skills and experienced professionals to connect with
+          users looking for specific services.</p>
       </div>
 
       <div class="row">
@@ -361,7 +378,7 @@
               <div class="error-message"></div>
               <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
             </div> -->
-          <!-- <div class="text-center"><button id="appointment-form-button" type="submit">Make an Appointment</button>
+  <!-- <div class="text-center"><button id="appointment-form-button" type="submit">Make an Appointment</button>
           </div>
           <p class="text-center my-3" data-aos="zoom-in" id="appointment-form-status"></p>
       </form>
@@ -422,9 +439,10 @@
               <p class="fst-italic">True education is beyond earning degrees it is more than bookish knowledge.</p>
               <img src="{% static 'assets/img/departments-5.jpg' %}" alt="" class="img-fluid">
               <p>True education is beyond earning degrees it is more than bookish knowledge.It helps people
-                 become better citizens, get a better-paid job, shows the difference between good and
-                  bad. Education shows us the importance of hard work and, at the same time, helps us grow and develop.
-                 Thus, we are able to shape a better society to live in by knowing and respecting rights, laws, and regulations.</p>
+                become better citizens, get a better-paid job, shows the difference between good and
+                bad. Education shows us the importance of hard work and, at the same time, helps us grow and develop.
+                Thus, we are able to shape a better society to live in by knowing and respecting rights, laws, and
+                regulations.</p>
             </div>
             <div class="tab-pane" id="tab-2">
               <h3>Cardiology</h3>
@@ -466,7 +484,7 @@
                 variations in usage of the term. In the United States, the term is used to contrast with osteopathic
                 medicine, especially in the field of medical education.</p>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -627,12 +645,13 @@
               <h4>Coordinator</h4>
             </div>
           </div><!-- End testimonial item -->
-          
+
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Overseeing the design process using technical expertise, Maintaining thorough documentation of the design process.
+                Overseeing the design process using technical expertise, Maintaining thorough documentation of the
+                design process.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="{% static 'assets/img/testimonials/testimonials-2004.jpg' %}" class="testimonial-img" alt="">
@@ -640,12 +659,13 @@
               <h4>Designer</h4>
             </div>
           </div><!-- End testimonial item -->
-          
+
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Overseeing the design process using technical expertise, business coordinator typically provides support to an organization in administrative functions.
+                Overseeing the design process using technical expertise, business coordinator typically provides support
+                to an organization in administrative functions.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="{% static 'assets/img/testimonials/testimonials-1995.jpg' %}" class="testimonial-img" alt="">
@@ -653,12 +673,13 @@
               <h4>Coordinator</h4>
             </div>
           </div><!-- End testimonial item -->
-         
+
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Senior Executive Assistant. Senior executive assistants provide assistance to top-level executives and corporate managers.
+                Senior Executive Assistant. Senior executive assistants provide assistance to top-level executives and
+                corporate managers.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="{% static 'assets/img/testimonials/testimonials-4445.jpg' %}" class="testimonial-img" alt="">
@@ -772,31 +793,43 @@
       </div>
 
       <div class="gallery-slider swiper-container">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-01.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-02.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-03.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-04.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-05.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-06.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-07.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-08.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-09.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-10.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-11.jpg' %}"
-                class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a class="gallery-lightbox" href="#"><img src="{% static 'assets/img/gallery/gallery-12.jpg' %}"
-                class="img-fluid" alt=""></a></div>
+        <div class="swiper-wrapper align-items-center gallerys">
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-01.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-01.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-02.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-02.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-03.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-03.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-04.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-04.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-05.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-05.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-06.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-06.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-07.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-07.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-08.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-08.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-09.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-09.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-10.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-10.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-11.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-11.jpg' %}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a class="gallery-lightbox"
+              href="{% static 'assets/img/gallery/gallery-12.jpg' %}"><img
+                src="{% static 'assets/img/gallery/gallery-12.jpg' %}" class="img-fluid" alt=""></a></div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -817,48 +850,53 @@
       <ul class="faq-list">
 
         <li>
-          <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">How would I get education related posts in your website? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+          <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">How would I get education related posts
+            in your website? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
           </div>
           <div id="faq1" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Simply click on 'services' and than in 'education' 
-              and you will reach the education page where you can see education related posts. 
+              Simply click on 'services' and than in 'education'
+              and you will reach the education page where you can see education related posts.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">What if I get confused while reading your
-             education related blogs? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+          <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">What if I get confused while reading
+            your
+            education related blogs? <i class="bi bi-chevron-down icon-show"></i><i
+              class="bi bi-chevron-up icon-close"></i>
           </div>
           <div id="faq2" class="collapse" data-bs-parent=".faq-list">
             <p>
               We have also provided you tube vedio links in our posts where you can clear your confusions.
-               Other option is leaving a comment in comment section and you will get a reply soon.
+              Other option is leaving a comment in comment section and you will get a reply soon.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">How do you provide services? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+          <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">How do you provide services? <i
+              class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
           </div>
           <div id="faq3" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Starinfosol's mission is to offer residents of the Local area the best service in the area. We are 
-              committed to providing the service quality and value that our customers expect. To improve your strength 
-              and grow up your personality. Self-motivated and hardworking with positive attitude towards career and life.
+              Starinfosol's mission is to offer residents of the Local area the best service in the area. We are
+              committed to providing the service quality and value that our customers expect. To improve your strength
+              and grow up your personality. Self-motivated and hardworking with positive attitude towards career and
+              life.
             </p>
           </div>
         </li>
 
         <li>
-          <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What is the main motive of starinfosol? <i class="bi bi-chevron-down icon-show"></i><i
-              class="bi bi-chevron-up icon-close"></i></div>
+          <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What is the main motive of starinfosol?
+            <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
           <div id="faq4" class="collapse" data-bs-parent=".faq-list">
             <p>
-              Our team always remains ready to provide you better services in shorter time. Your security 
-              is first attention of our team.Every member of our team is fully trained and our team provides 
-              better services while taking care of your safety.Save your precious time to go out, 
+              Our team always remains ready to provide you better services in shorter time. Your security
+              is first attention of our team.Every member of our team is fully trained and our team provides
+              better services while taking care of your safety.Save your precious time to go out,
               no need to waste time by wandering around for service, book your service in few minutes.
             </p>
           </div>
@@ -908,9 +946,7 @@
     </div>
 
     <div>
-      <iframe style="border:0; width: 100%; height: 350px;"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14790.082407146647!2d78.8991787188854!3d22.067926652893444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd565ec995374f5%3A0xa7d715229331a600!2sVishnu%20Nagar%2C%20Chhindwara%2C%20Madhya%20Pradesh%20480001!5e0!3m2!1sen!2sin!4v1620542067126!5m2!1sen!2sin"
-        frameborder="0" allowfullscreen></iframe>
+      <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14790.082407146647!2d78.8991787188854!3d22.067926652893444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd565ec995374f5%3A0xa7d715229331a600!2sVishnu%20Nagar%2C%20Chhindwara%2C%20Madhya%20Pradesh%20480001!5e0!3m2!1sen!2sin!4v1620542067126!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div class="container">
@@ -931,7 +967,7 @@
               <div class="info-box mt-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>info@starinfosl.com<br>Starinfosl954@gmail.com</p>
+                <p>info@starinfosol.com<br>Starinfosol954@gmail.com</p>
               </div>
             </div>
             <div class="col-md-6">
@@ -960,10 +996,12 @@
               <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" name="content" id="content" rows="5" placeholder="Message" required></textarea>
+              <textarea class="form-control" name="content" id="content" rows="5" placeholder="Message"
+                required></textarea>
             </div>
             {% csrf_token %}
-            <div class="text-center"><button class="btn btn-primary btn-sm" id="my-form-button" type="submit">Send Message</button></div>
+            <div class="text-center"><button class="appointment-btn" id="" type="submit">Send
+                Message</button></div>
             <!-- <p class="text-center my-3" data-aos="zoom-in" id="my-form-status"></p> -->
           </form>
         </div>
@@ -972,6 +1010,7 @@
 
     </div>
   </section><!-- End Contact Section -->
+
 
 </main><!-- End #main -->
 

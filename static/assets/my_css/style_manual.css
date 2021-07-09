@@ -1,0 +1,266 @@
+/* Mannually data ################################################# */
+
+/* Carrierpage ############################################################################ */
+
+#carrierLogo {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, white, rgb(70, 67, 67), white);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 4s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+
+#cityName {
+  height: 35px;
+  width: 70%;
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+#popUpMain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 72, 75, 0.562);
+  z-index: 1001;
+}
+
+#popup {
+  width: 500px;
+  height: 230px;
+  border-radius: 16px;
+  background: white;
+  background-size: cover;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: 1px 2px 5px 3px black; */
+  text-align: center;
+}
+
+.submitId {
+  transform: translateY(-35px);
+  background-color: rgb(74, 179, 228);
+  border: none;
+  border-radius: 5px;
+  margin-top: 11px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  padding: 8px 18px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+}
+
+.submitId:hover {
+  background-color: rgb(5, 112, 161);
+}
+
+/* business management ################################################# */
+
+/* Overview management */
+
+.overview {
+  color: rgb(230, 107, 63);
+  text-underline-position: below;
+}
+
+#overviewBG {
+  background-color: rgba(255, 169, 138, 0.12);
+  text-align: center;
+}
+
+#analysisBG {
+  background-color: rgba(170, 170, 250, 0.12);
+}
+
+#managementBG {
+  background-color: rgba(191, 253, 166, 0.301);
+}
+
+#hrBG {
+  background-color: rgba(240, 253, 63, 0.267);
+}
+
+#riskBG {
+  background-color: rgba(26, 243, 225, 0.116);
+}
+#portfolioBG {
+  background-color: rgba(252, 5, 5, 0.11);
+}
+#projectBG {
+  background-color: rgba(243, 26, 178, 0.103);
+}
+
+/* physiotherapy page################################################# */
+
+#therapy {
+  padding: 15px;
+  background-color: rgba(188, 252, 180, 0.247);
+}
+
+#therapy h2 {
+  color: rgb(33, 119, 22);
+}
+
+#cab {
+  text-align: center;
+}
+
+#agreeAB {
+  transform: translateX(150px);
+  transition: transform 1s;
+  transition-timing-function: ease-out;
+}
+
+#agreeAB:hover {
+  transform: scale(1.5, 1.5);
+}
+
+/* welcomelogo############################################################################ */
+
+#welcomeLogo {
+  text-align: center;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, white, blue, red, green, pink, white);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 6s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+/* Welcome the user##############################################################*/
+
+
+
+#mrWelcome {
+  text-align: center;
+  color: rgb(10, 10, 10);
+  font-size: 32px;
+  padding-top: 0;
+  padding-left: 30px;
+  height: 12vh;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+}
+
+#mrWelcome div {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+#mrWelcome_p { 
+  color: #000000;
+  animation: showup 7s infinite;
+}
+
+#mrWelcome_q {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+#mrWelcome_span {
+  color: rgb(0, 0, 0);
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left: -800px; }
+    20% { margin-left: -800px; }
+    35% { margin-left: -162px; }
+    100% { margin-left: -162px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+/* ================================================= */
+
+#welcomeheading {
+  color: blue;
+  font-family: 'Noto Serif', serif;
+  font-size: 40px;
+  background: linear-gradient(to right, white, rgb(44, 44, 44), blue, red, green, pink, white);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: animate 4s linear infinite;
+  animation: animate 7s linear infinite ease-in;
+}
+@keyframes crown1 {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+

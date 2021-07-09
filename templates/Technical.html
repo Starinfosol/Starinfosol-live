@@ -4,6 +4,9 @@
 
 {% block body %}
 {% load static %}
+<div id="preloader_p">
+    <div id="status">&nbsp;</div>
+</div>
 
 <main id="main">
 
@@ -12,36 +15,43 @@
 
         <div class="container" data-aos="fade-up">
 
-
             <!-- ########################################################################################### -->
             <br>
             <br>
             <br>
-            <section id="faq" class="faq section-bg">
-                <div class="container" data-aos="fade-up">
+            <br>
+                <section id="faq" class="faq section-bg">
+                    <div class="container" data-aos="fade-up">
+                        <div class="section-title">
+                            <h2>Technology</h2>
+                            <br>
+                            <p>
+                                The technology is the study and transformation of techniques, tools, and machines
+                                created by
+                                humans. Technology allows humans to study and evolve the physical elements that are
+                                present
+                                in their lives.
 
-                    <div class="section-title">
-                        <h2>Technology</h2>
-                        <br>
-                        <p>
-                            The technology is the study and transformation of techniques, tools, and machines created by humans. Technology allows humans to study and evolve the physical elements that are present in their lives.
-                        
-                        </p>
+                            </p>
+
+                        </div>
+                        <hr>
+
 
                     </div>
-                    <hr>
-                    
-                </div>
-            </section>
+
+                </section>
             <br>
 
 
             <div class="row g-5">
                 <div class="col-md-8">
-                    <h3 class="pb-4 mb-4 fw-bold border-bottom">
-                        <strong>Services</strong>
-                    </h3>
+                    <div data-aos="fade-down-right">
+                        <h3 class="pb-4 mb-4 fw-bold border-bottom">
+                            <strong>Services</strong>
+                        </h3>
 
+                    </div>
                     <article class="blog-post">
                         <h2 class="blog-post-title">Home Automation System</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
@@ -71,139 +81,15 @@
                         </p>
                         <hr>
 
-                        <h2 class="blog-post-title">Insurance</h2>
-                        <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
-                                <img src="{% static 'assets/img/technical/technical-3.jpg' %}" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
-                                <p><strong>Insurance</strong> is a contract (policy) in which an insurer indemnifies
-                                    another against losses from specific contingencies or perils. There many types of
-                                    <strong>insurance policies</strong>.
-                                    Life, health, homeowners, and auto are the most common forms of insurance. <br> Our
-                                    team provides insurance to you.
-
-                                    <br>
-
-                                    Its aim is to reduce financial uncertainty and make accidental
-                                    loss manageable. It does this substituting payment of a small, known fee—an
-                                    <strong>insurance</strong> premium—to a professional insurer in exchange for the
-                                    assumption
-                                    of the risk a large loss, and a promise to pay in the event of such a loss.
-                                </p>
-
-                            </div>
-                        </div>
-                        <blockquote class="blockquote">
-                            <p><strong>GoDigit's Health Insurance Product</strong></p>
-                        </blockquote>
-                        <p>Features of Health Insurance:</p>
-                        <ol>
-                            <li> यह हैल्थ इन्श्योरेन्स
-                               <strong> Digital India</strong> को
-                                <strong>Promote</strong> करता है।
-                                अर्थात <strong>Documents</strong>
-                                की कोई <strong>Hard Copy</strong>
-                                नहीं लेता, सब कुछ आपकी
-                                <strong>Mail ID</strong> पर <strong>Digital</strong> होगा। </li>
-                            <li> <strong>Sum Assured</strong> अर्थात वह
-                                राशि जिसके लिए आप
-                                स्वस्थ्य रहने के लिए इलाज
-                                के लिए बीमित होंगे, वह राशि
-                                <strong>2</strong> लाख,<strong>3</strong> लाख या <strong>5</strong> लाख
-                                होगी। यह आप पर निर्भर
-                                करेगा कि आप कितनी राशि
-                                के लिए बीमित <strong>(Insured)</strong>
-                                होना चाहेंगे।
-                            </li>
-                            <li> यह <strong>Health Insurance</strong>
-                                <strong>18</strong> से <strong>55</strong> वर्ष का व्यक्ति ले सकता है और <strong>65</strong> वर्ष की उम्र तक रिन्यू करके जारी
-                                रख सकता है, इस हैल्थ इन्श्योरैन्स में दो बच्चों को भी
-                                शामिल किया जा सकता है।
-                                बच्चे की उम्र <strong>90</strong> दिन (<strong>3</strong> माह) से <strong>25</strong> वर्ष तक मान्य है। </li>
-                            <li> इस हैल्थ इन्श्योरैन्स प्लान में <strong>24</strong> घण्टे भर्ती की शर्त पर एक वर्ष तक मैडीकल खर्च को
-                                कम्पनी कवर करती रहेगी। </li>
-                            <li>अस्पताल में भर्ती पर कमरे का किराया <strong>Sum</strong>
-                                <strong>Assured</strong> का <strong>1%</strong> और <strong>ICU</strong> के कमरे का <strong>2%</strong> किराये का भुगतान कम्पनी माना कि आपका <strong>Sum Assured 5</strong>
-                                लाख है तो कमरे का किराया प्रतिदिन <strong>5000/ रू0</strong> और <strong>ICU</strong> के कमरे का किराया प्रतिदिन <strong>10000/ रू•</strong>
-                                की दर से कम्पनी भुगतान
-                                करेगी। </li>
-                            <li> इस हैल्थ इन्श्योरैन्स प्लान
-                                में न तो मैडीकल जांच है
-                                और न कोई अतिरिक्त
-                                प्रीमियम व सभी प्रक्रिया
-                                पेपर लैस डिजिटल है।
-                            </li>
-                            <li> अस्पताल में भर्ती होनें से
-                                <strong>30</strong> दिन पहले का व
-                                अस्पताल से <strong>Discharge</strong>
-                                होने के <strong>60</strong> दिन बात तक का
-                                खर्च कम्पनी वहन करती है।
-                            </li>
-                            <li> हैल्थ इन्श्योरैन्स कम्पनी
-                                <strong>Automatic restoration</strong>
-                                की सुविधा प्रदान करती है।
-                                माना कि मेरा <strong>Sum</strong>
-                                <strong>Assures 5</strong> लाख <strong>रू0</strong> है
-                                और यह राशि मेरे इलाज में
-                                खर्च हो गई लेकिन मेरी पत्नी
-                                बीमार हो गई तो उसके इलाज
-                                को भी <strong>5</strong> लाख रू• <strong>Advance</strong> में
-                                <strong>Add</strong> करेगी। ये ही
-                                <strong>Automatic restoration</strong>
-                                है। </li>
-                            <li> <strong>80 D</strong> की धारा के अनुसार
-                                आयकर में छूट देय है। </li>
-                            <li> भारत में <strong>5000 +</strong>
-                                अस्पतालों में कैशलैस
-                                ट्रीटमैन्ट कराया जा
-                                सकता है। </li>
-                            <li> यह हैल्थ पाॅलिसी
-                                <strong>Covid- 19</strong> को कवर
-                                करती है। </li>
-                            <li> पालिसी लाॅगिन कराने के
-                                <strong>30</strong> दिन बाद से प्रभावी हो
-                                जायेगी। </li>
-                            <li> <strong>A/B</strong> जाॅन सहित भारत में
-                                <strong>Same premium</strong> है।
-                            </li>
-                            <li> इलाज के लिए भर्ती होने
-                                की सूचना कम्पनी को निम्न
-                                <strong>Toll Free No</strong> पर सूचित
-                                करना होगा।
-                                <strong>1800 - 258 - 4242</strong>
-                            </li>
-                            <li> प्रीमियम की <strong>Table</strong>
-                                से आप जान सकते हैं कि
-                                आपको प्रतिवर्ष कितना
-                                प्रीमियम देना है। </li>
-                            <li> पाॅलिसी लाॅगिन कराने के
-                                लिए आपको चाहिए •••• <br>
-                                वोटर कार्ड <br>
-                                पैन कार्ड <br>
-                                <strong>E mail ID</strong> <br>
-                                <strong>Mob. No</strong> <br>
-                                <strong>Height</strong> <br>
-                                <strong>Weight</strong> <br>
-                                प्रीमियम राशि <br>
-                                फोटो (पासपोर्ट साइज) <br>
-
-                                पाॅलिसी लाॅगिन कराने व अन्य जानकारी के लिए काॅल कीजिए <br>
-                                <h4 class="text-primary">Starinfosol</h4>
-                                <i class="text-info">+91 9074919296</i> <br> </li>
-                        </ol>
-                        <hr>
-
                         <br>
 
                         <h2 class="blog-post-title">Photo Shoot</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-5.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <p>The service of photo shoot is also provided by us.
                                     A photo shoot is a term that describes the process taken by creatives and models
                                     that results in a predetermined visual objective being obtained. An example
@@ -223,10 +109,10 @@
                         <h2 class="blog-post-title">Electrician</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-8.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <p>You can manage an eletrician using our website by just booking online.
                                     Electrician's job is to plan, install and maintain
                                     electrical wiring systems across a wide variety of environments. These may be
@@ -248,10 +134,10 @@
                         <h2 class="blog-post-title">Event Management</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-9.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <p>The process of planning and <strong>coordinating</strong> the event is usually
                                     referred
                                     to as <strong>event</strong> planning and which can include budgeting, scheduling,
@@ -282,10 +168,10 @@
                         <h2 class="blog-post-title">Hotel and Rental Services</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-4.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <p>Hotel and rental services includes providing room, halls, houses,hotels etc. in rent
                                     for temporary. We check out
                                     and provide best and suitable hotels, rooms etc. in your area.
@@ -312,10 +198,10 @@
                         <h2 class="blog-post-title">Constructions</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-7.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <p>The work of building or making something, especially buildings, bridges, etc. is
                                     taken by us.
                                     Most people would look at a building and view it as just that:
@@ -339,20 +225,21 @@
                         <h2 class="blog-post-title">Agriculture</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-01.jpg' %}" alt=""
                                     class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <p> <strong>Distribution:</strong> Our team provides input for
                                     agricultural production, including seeds, fertilizers, fuel,
                                     and machinery services. Distribution of high quality hybrid seeds,
                                     insectisides, pesticides
                                     and quality fertilisers(especially organic manure) is our main
                                     focus.
-                                    <br> 
                                     <br>
-                                    <strong>Agriculture Advisory:</strong> It includes giving prescription about how to manage a particular 
+                                    <br>
+                                    <strong>Agriculture Advisory:</strong> It includes giving prescription about how to
+                                    manage a particular
                                     crop in its entire life by an expert.
                                 </p>
 
@@ -365,10 +252,10 @@
                         <h2 class="blog-post-title">Tours & Travels</h2>
                         <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
                         <div class="row">
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
                                 <img src="{% static 'assets/img/technical/technical-6.jpg' %}" alt="" class="img-fluid">
                             </div>
-                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
                                 <p>You can book <strong>tours</strong> using our website in just few seconds.
                                     The <strong>travel and tourism</strong> is currently experiencing unprecedented
                                     growth. The industry is one of the largest and most profitable industries
@@ -378,6 +265,147 @@
 
                             </div>
                         </div>
+                        <hr>
+                        <br>
+                        <h2 class="blog-post-title">Insurance</h2>
+                        <!-- <p class="blog-post-meta">June 1, 2021 by <a href="#">Rishabh</a></p> -->
+                        <div class="row">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+                                <img src="{% static 'assets/img/technical/technical-3.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-in">
+                                <p><strong>Insurance</strong> is a contract (policy) in which an insurer
+                                    indemnifies
+                                    another against losses from specific contingencies or perils. There many
+                                    types of
+                                    <strong>insurance policies</strong>.
+                                    Life, health, homeowners, and auto are the most common forms of insurance.
+                                    <br> Our
+                                    team provides insurance to you.
+
+                                    <br>
+
+                                    Its aim is to reduce financial uncertainty and make accidental
+                                    loss manageable. It does this substituting payment of a small, known fee—an
+                                    <strong>insurance</strong> premium—to a professional insurer in exchange for
+                                    the
+                                    assumption
+                                    of the risk a large loss, and a promise to pay in the event of such a loss.
+                                </p>
+
+                            </div>
+                        </div>
+                        <blockquote class="blockquote">
+                            <p><strong>GoDigit's Health Insurance Product</strong></p>
+                        </blockquote>
+                        <p>Features of Health Insurance:</p>
+                        <ol>
+                            <li> यह हैल्थ इन्श्योरेन्स
+                                <strong> Digital India</strong> को
+                                <strong>Promote</strong> करता है।
+                                अर्थात <strong>Documents</strong>
+                                की कोई <strong>Hard Copy</strong>
+                                नहीं लेता, सब कुछ आपकी
+                                <strong>Mail ID</strong> पर <strong>Digital</strong> होगा।
+                            </li>
+                            <li> <strong>Sum Assured</strong> अर्थात वह
+                                राशि जिसके लिए आप
+                                स्वस्थ्य रहने के लिए इलाज
+                                के लिए बीमित होंगे, वह राशि
+                                <strong>2</strong> लाख,<strong>3</strong> लाख या <strong>5</strong> लाख
+                                होगी। यह आप पर निर्भर
+                                करेगा कि आप कितनी राशि
+                                के लिए बीमित <strong>(Insured)</strong>
+                                होना चाहेंगे।
+                            </li>
+                            <li> यह <strong>Health Insurance</strong>
+                                <strong>18</strong> से <strong>55</strong> वर्ष का व्यक्ति ले सकता है और
+                                <strong>65</strong> वर्ष की उम्र तक रिन्यू करके जारी
+                                रख सकता है, इस हैल्थ इन्श्योरैन्स में दो बच्चों को भी
+                                शामिल किया जा सकता है।
+                                बच्चे की उम्र <strong>90</strong> दिन (<strong>3</strong> माह) से
+                                <strong>25</strong> वर्ष तक मान्य है।
+                            </li>
+                            <li> इस हैल्थ इन्श्योरैन्स प्लान में <strong>24</strong> घण्टे भर्ती की शर्त पर एक
+                                वर्ष तक मैडीकल खर्च को
+                                कम्पनी कवर करती रहेगी। </li>
+                            <li>अस्पताल में भर्ती पर कमरे का किराया <strong>Sum</strong>
+                                <strong>Assured</strong> का <strong>1%</strong> और <strong>ICU</strong> के कमरे
+                                का <strong>2%</strong> किराये का भुगतान कम्पनी माना कि आपका <strong>Sum Assured
+                                    5</strong>
+                                लाख है तो कमरे का किराया प्रतिदिन <strong>5000/ रू0</strong> और
+                                <strong>ICU</strong> के कमरे का किराया प्रतिदिन <strong>10000/ रू•</strong>
+                                की दर से कम्पनी भुगतान
+                                करेगी।
+                            </li>
+                            <li> इस हैल्थ इन्श्योरैन्स प्लान
+                                में न तो मैडीकल जांच है
+                                और न कोई अतिरिक्त
+                                प्रीमियम व सभी प्रक्रिया
+                                पेपर लैस डिजिटल है।
+                            </li>
+                            <li> अस्पताल में भर्ती होनें से
+                                <strong>30</strong> दिन पहले का व
+                                अस्पताल से <strong>Discharge</strong>
+                                होने के <strong>60</strong> दिन बात तक का
+                                खर्च कम्पनी वहन करती है।
+                            </li>
+                            <li> हैल्थ इन्श्योरैन्स कम्पनी
+                                <strong>Automatic restoration</strong>
+                                की सुविधा प्रदान करती है।
+                                माना कि मेरा <strong>Sum</strong>
+                                <strong>Assures 5</strong> लाख <strong>रू0</strong> है
+                                और यह राशि मेरे इलाज में
+                                खर्च हो गई लेकिन मेरी पत्नी
+                                बीमार हो गई तो उसके इलाज
+                                को भी <strong>5</strong> लाख रू• <strong>Advance</strong> में
+                                <strong>Add</strong> करेगी। ये ही
+                                <strong>Automatic restoration</strong>
+                                है।
+                            </li>
+                            <li> <strong>80 D</strong> की धारा के अनुसार
+                                आयकर में छूट देय है। </li>
+                            <li> भारत में <strong>5000 +</strong>
+                                अस्पतालों में कैशलैस
+                                ट्रीटमैन्ट कराया जा
+                                सकता है। </li>
+                            <li> यह हैल्थ पाॅलिसी
+                                <strong>Covid- 19</strong> को कवर
+                                करती है।
+                            </li>
+                            <li> पालिसी लाॅगिन कराने के
+                                <strong>30</strong> दिन बाद से प्रभावी हो
+                                जायेगी।
+                            </li>
+                            <li> <strong>A/B</strong> जाॅन सहित भारत में
+                                <strong>Same premium</strong> है।
+                            </li>
+                            <li> इलाज के लिए भर्ती होने
+                                की सूचना कम्पनी को निम्न
+                                <strong>Toll Free No</strong> पर सूचित
+                                करना होगा।
+                                <strong>1800 - 258 - 4242</strong>
+                            </li>
+                            <li> प्रीमियम की <strong>Table</strong>
+                                से आप जान सकते हैं कि
+                                आपको प्रतिवर्ष कितना
+                                प्रीमियम देना है। </li>
+                            <li> पाॅलिसी लाॅगिन कराने के
+                                लिए आपको चाहिए •••• <br>
+                                वोटर कार्ड <br>
+                                पैन कार्ड <br>
+                                <strong>E mail ID</strong> <br>
+                                <strong>Mob. No</strong> <br>
+                                <strong>Height</strong> <br>
+                                <strong>Weight</strong> <br>
+                                प्रीमियम राशि <br>
+                                फोटो (पासपोर्ट साइज) <br>
+
+                                पाॅलिसी लाॅगिन कराने व अन्य जानकारी के लिए काॅल कीजिए <br>
+                                <h4 class="text-primary">Starinfosol</h4>
+                                <i class="text-info">+91 9074919296</i> <br>
+                            </li>
+                        </ol>
                         <hr>
                     </article>
 
@@ -430,7 +458,8 @@
                     <div class="position-sticky" style="top: 2rem;">
                         <div class="p-4 mb-3 bg-light rounded">
                             <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
-                                <img src="{% static 'assets/img/technical/com.png' %}" alt="" class="img-fluid">
+                                <img id="agreeAB" src="{% static 'assets/img/technical/com.png' %}" alt=""
+                                    class="img-fluid">
                             </div>
                             <h4 class="fst-italic">About</h4>
                             <p class="mb-0">Starinfosol is an organisation that

@@ -47,6 +47,17 @@ def careers(request):
 
 ################################################################################
 
+# def popup(request):
+#     if request.method == "POST":
+#         cityName = request.POST['cityName']
+#         city = Info(cityName=cityName)
+#         city.save()
+    # allcareers = Careers.objects.all()
+    # context = {'allcareers': allcareers}
+    # return render(request, 'careers.html', context)
+
+################################################################################
+
 def contact(request):
     if request.method == "POST":
         name = request.POST['name']
